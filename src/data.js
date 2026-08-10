@@ -30,7 +30,7 @@ export const experience = [
 export const projects = [
   {
     name: 'Salon Menu',
-    date: '2026',
+    date: 'Aug 2026',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'Vercel'],
     description:
       'Mobile-first digital nail polish menu with 25+ colors across 4 categories. Three-level nav (categories → colors → zoom) with Framer Motion transitions and swatch fallback. Accessible UI with semantic buttons and text labels for keyboard/colorblind users.',
@@ -54,7 +54,7 @@ export const projects = [
   },
   {
     name: 'Leetweak',
-    date: null,
+    date: 'Aug 2026',
     stack: ['Python', 'Streamlit', 'requests', 'pandas'],
     description:
       "Local app that reads a public LeetCode profile via LeetCode's GraphQL endpoint, ranks problem tags by relative weakness, and recommends one unsolved, non-premium problem to close the gap.",
@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     name: 'Outdone',
-    date: null,
+    date: 'Aug 2026',
     stack: ['Python', 'Flask', 'Anthropic API (Claude Haiku)', 'smtplib', 'cron'],
     description:
       'Periodically emails a fake "friend just hit your goal" update as a lighthearted motivation nudge. Flask UI for managing goals, JSON files as the data layer, cron-scheduled daily send via Gmail SMTP.',
