@@ -2,7 +2,7 @@
 
 Single-page portfolio site for Jacob Nguyen, CS grad (UC Davis, June 2026).
 
-![Header preview](docs/header.png)
+![Hero section preview](docs/hero.png)
 
 **Live demo:** [your-site.vercel.app](#)
 

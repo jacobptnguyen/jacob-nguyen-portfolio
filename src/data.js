@@ -1,6 +1,6 @@
 export const contact = {
   email: 'jacobptnguyen@gmail.com',
-  linkedin: 'https://linkedin.com/in/jacob-nguyen',
+  linkedin: 'https://www.linkedin.com/in/jacob-nguyen-138267262/',
   github: 'https://github.com/jacobptnguyen',
 }
 

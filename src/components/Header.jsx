@@ -13,7 +13,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a
           href="#top"
-          className="flex items-center gap-2.5 font-mono text-sm font-semibold tracking-tight text-neutral-900 hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300"
+          className="flex items-center gap-2.5 text-sm font-bold tracking-tight text-neutral-900 hover:text-neutral-600 dark:text-neutral-100 dark:hover:text-neutral-300"
         >
           <span className="h-11 w-11 shrink-0 overflow-hidden rounded-full border-2 border-neutral-300 dark:border-neutral-700">
             <img

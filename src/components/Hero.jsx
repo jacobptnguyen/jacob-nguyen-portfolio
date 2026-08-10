@@ -42,14 +42,17 @@ export default function Hero() {
             variants={item}
             className="mt-3 text-lg font-medium text-neutral-700 dark:text-neutral-300 sm:text-xl"
           >
-            Software Engineer · CS Grad, UC Davis
+            Aspiring SWE | UC Davis CS &rsquo;26 | Full-Stack: React, Node, TypeScript
           </motion.p>
           <motion.p
             variants={item}
             className="mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-400 sm:text-lg"
           >
-            I build fast, accessible full-stack apps: a mobile-first digital menu with Framer
-            Motion transitions, and a MERN app with a fully CRUD&apos;d REST API.
+            Full-stack developer with hands-on React, Node/Express, Flask, and MongoDB
+            experience, and deployments across Vercel and Render. Shipped 4 production apps,
+            including a full CRUD REST API with CI/CD and a mobile-first UI with 25+ interactive
+            components. B.S. Computer Science, UC Davis. Seeking a junior or entry-level software
+            engineering role.
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
