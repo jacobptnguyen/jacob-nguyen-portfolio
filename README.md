@@ -4,7 +4,7 @@ Single-page portfolio site for Jacob Nguyen, CS grad (UC Davis, June 2026).
 
 ![Hero section preview](docs/hero.png)
 
-[**Live demo:** ](https://jacob-nguyen-portfolio.vercel.app/)
+## [Live Demo](https://jacob-nguyen-portfolio.vercel.app/)
 
 ## Tech Stack
 
