@@ -12,7 +12,7 @@ export const education = {
 
 export const experience = [
   {
-    role: 'Software Developer',
+    role: 'Software Engineer Intern',
     org: 'Monterey Peninsula College',
     date: 'Jun – Jul 2024',
     bullets: [
