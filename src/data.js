@@ -12,8 +12,9 @@ export const education = {
 
 export const experience = [
   {
-    role: 'Software Engineer Intern',
+    role: 'Software Engineer',
     org: 'Monterey Peninsula College',
+    employmentType: 'Internship',
     date: 'Jun – Jul 2024',
     bullets: [
       'Built a data visualization tool in Component Pascal (BlackBox Framework) parsing arbitrary CSVs into a linked-list structure, dynamically rendering histograms',
@@ -30,7 +31,7 @@ export const experience = [
 export const projects = [
   {
     name: 'Salon Menu',
-    date: 'Aug 2026',
+    date: 'Aug 2026 – Present',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'Vercel'],
     description:
       'Mobile-first digital nail polish menu with 25+ colors across 4 categories. Three-level nav (categories → colors → zoom) with Framer Motion transitions and swatch fallback. Accessible UI with semantic buttons and text labels for keyboard/colorblind users.',

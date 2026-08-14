@@ -14,9 +14,15 @@ export default function Experience() {
               className="rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-                  {job.role} · {job.org}
-                </h3>
+                <div>
+                  <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                    {job.role}
+                  </h3>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-500">
+                    {job.org}
+                    {job.employmentType && ` · ${job.employmentType}`}
+                  </p>
+                </div>
                 <span className="font-mono text-sm text-neutral-500 dark:text-neutral-500">
                   {job.date}
                 </span>
