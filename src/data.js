@@ -42,7 +42,7 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Resolved 20+ IT tickets, including password resets, DUO MFA setup, account lockouts, and campus badge access, communicating with students by phone and Ebbot Chat while staying calm and clear with those who were frustrated or racing to get back into class before a deadline.',
+      'Resolved 20+ IT tickets, including password resets, DUO MFA setup, account lockouts, and campus badge access, communicating with students by phone and Ebbot Chat.',
       'Triaged issues in real time, distinguishing what could be resolved directly from what needed escalation, and communicated technical details clearly to coworkers when handing off inactive-account, missing-student-ID, or badge-access issues.',
       "Directed students to the right resource when a request fell outside IT's scope, reducing back-and-forth and getting them to the correct department faster.",
     ],
