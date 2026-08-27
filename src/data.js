@@ -26,7 +26,7 @@ export const experience = [
     role: 'Open Source Contributor',
     org: 'freeCodeCamp',
     employmentType: 'Open Source',
-    date: 'Aug 2026',
+    date: 'Aug 2026 – Present',
     bullets: [
       'Replaced regex-based test assertions with behavior-based tests in a JavaScript workshop, part of a broader curriculum-wide initiative to make grading more reliable for learners.',
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
@@ -67,20 +67,18 @@ export const experience = [
 export const projects = [
   {
     name: 'Salon Menu',
-    date: 'Aug 2026 – Present',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
     description:
-      '120+ unique visitors and counting. Redesigned from a three-level nav (categories → colors → zoom) into a single scrollable gallery of 25+ color cards, each independently pinch-zoomable, pannable, and rotatable right in place.',
+      '120+ unique visitors and counting via QR-code scans. Redesigned from a three-level nav (categories → colors → zoom) into a single scrollable gallery of 25+ interactable cards, each independently pinch-zoomable, pannable, and rotatable right in place. Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, added a swatch-color fallback for missing photos, and kept the app backend-free and accessible (semantic buttons, reduced-motion support).',
     github: 'https://github.com/jacobptnguyen/salon-menu',
     demo: 'https://salon-menu-jade.vercel.app/',
     image: { src: '/images/salon-menu-gallery.jpg', alt: 'Salon Menu single-screen scrollable gallery' },
   },
   {
     name: 'Rate My Stuff',
-    date: 'Aug 2026',
     stack: ['MERN', 'Express', 'MongoDB', 'Mongoose', 'TypeScript', 'Render'],
     description:
-      'Full-stack app with a RESTful API and full CRUD for ratings, comments, and images. Responsive React/TypeScript frontend with React Router, deployed to Render with GitHub CI/CD.',
+      'Engineered a RESTful API in Node.js/Express with full CRUD for ratings, comments, and images, backed by MongoDB/Mongoose. Built a responsive React/TypeScript frontend with React Router, deployed to Render with GitHub CI/CD.',
     github: 'https://github.com/jacobptnguyen/rate-my-stuff',
     demo: 'https://rate-my-stuff.onrender.com/',
     image: { src: '/images/rate-my-stuff.jpg', alt: 'Rate My Stuff item rating card screenshot' },
@@ -110,18 +108,7 @@ export const skills = [
   },
   {
     category: 'Soft Skills',
-    items: [
-      'Communication',
-      'Active Listening',
-      'Patience',
-      'Problem-Solving',
-      'Time Management',
-      'Conflict Resolution',
-      'Customer Service',
-      'Teamwork',
-      'Adaptability',
-      'Attention to Detail',
-    ],
+    items: ['Communication', 'Problem-Solving', 'Time Management', 'Customer Service'],
   },
 ]
 
