@@ -15,7 +15,7 @@ Single-page scrolling site, in this fixed order:
 2. Hero — name, headline, one-line pitch, resume download + primary CTAs, and a footer-style contact link row
 3. Education
 4. Experience — reverse-chronological, most SWE-relevant roles first
-5. Projects — one full-width card per project (title, description, tech stack, GitHub link, live demo link when available, screenshot when available)
+5. Projects — one full-width card per project (title, bulleted description, tech stack, GitHub link, live demo link when available, screenshot when available)
 6. Skills — grouped by category (Languages, Frontend, Backend, Databases, Tools & Platforms, Soft Skills)
 7. Footer — contact links repeated (email, GitHub, LinkedIn, resume)
 
@@ -34,7 +34,8 @@ Apply these to every bullet, description, and headline added to `src/data.js`:
 
 ## Standard Portfolio Practices to Follow
 - Project-first: top projects visible near the top, no long scroll to reach them
-- Each project card shows: name, tech stack, 1-2 line outcome/description, GitHub link, live demo link when one exists
+- Each project card shows: name, tech stack, GitHub link, live demo link when one exists
+- **Every line of body copy is a bullet point, never a paragraph.** Applies to both Experience and Projects: each project's description is a bulleted list (`bullets` array in `src/data.js`), same as Experience entries — no single flowing `description` paragraph
 - Resume available as a direct PDF download/link, not just embedded text
 - Contact info (email + GitHub + LinkedIn) visible without hunting — in header, hero, and footer
 - Mobile-first responsive layout

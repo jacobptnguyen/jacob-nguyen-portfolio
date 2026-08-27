@@ -68,8 +68,10 @@ export const projects = [
   {
     name: 'Salon Menu',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
-    description:
-      '120+ unique visitors and counting via QR-code scans. Redesigned from a three-level nav (categories → colors → zoom) into a single scrollable gallery of 25+ interactable cards, each independently pinch-zoomable, pannable, and rotatable right in place. Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, added a swatch-color fallback for missing photos, and kept the app backend-free and accessible (semantic buttons, reduced-motion support).',
+    bullets: [
+      'Drove 120+ unique visitors via QR-code scans with a single-screen gallery of 25+ interactable cards, independently pinch-zoomable, pannable, and rotatable, built with React.',
+      'Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the app backend-free and accessible (semantic buttons, reduced-motion support).',
+    ],
     github: 'https://github.com/jacobptnguyen/salon-menu',
     demo: 'https://salon-menu-jade.vercel.app/',
     image: { src: '/images/salon-menu-gallery.jpg', alt: 'Salon Menu single-screen scrollable gallery' },
@@ -77,8 +79,10 @@ export const projects = [
   {
     name: 'Rate My Stuff',
     stack: ['MERN', 'Express', 'MongoDB', 'Mongoose', 'TypeScript', 'Render'],
-    description:
-      'Engineered a RESTful API in Node.js/Express with full CRUD for ratings, comments, and images, backed by MongoDB/Mongoose. Built a responsive React/TypeScript frontend with React Router, deployed to Render with GitHub CI/CD.',
+    bullets: [
+      'Engineered a RESTful API in Node.js/Express with full CRUD for ratings, comments, and images, backed by MongoDB/Mongoose.',
+      'Built a responsive React/TypeScript frontend with React Router, deployed to Render with GitHub CI/CD.',
+    ],
     github: 'https://github.com/jacobptnguyen/rate-my-stuff',
     demo: 'https://rate-my-stuff.onrender.com/',
     image: { src: '/images/rate-my-stuff.jpg', alt: 'Rate My Stuff item rating card screenshot' },

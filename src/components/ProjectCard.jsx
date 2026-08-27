@@ -14,7 +14,11 @@ export default function ProjectCard({ project }) {
 
       <div className="mt-3 flex flex-col gap-5 sm:flex-row">
         <div className="sm:flex-1">
-          <p className="text-neutral-700 dark:text-neutral-300">{project.description}</p>
+          <ul className="list-disc space-y-2 pl-5 text-neutral-700 dark:text-neutral-300">
+            {project.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
 
           <div className="mt-4 flex flex-wrap gap-1.5">
             {project.stack.map((tech) => (
