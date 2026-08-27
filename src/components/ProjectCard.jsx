@@ -6,7 +6,7 @@ export default function ProjectCard({ project }) {
           {project.name}
         </h3>
         {project.date && (
-          <span className="font-mono text-sm text-neutral-500 dark:text-neutral-500">
+          <span className="text-sm text-neutral-600 dark:text-neutral-400">
             {project.date}
           </span>
         )}
@@ -14,13 +14,13 @@ export default function ProjectCard({ project }) {
 
       <div className="mt-3 flex flex-col gap-5 sm:flex-row">
         <div className="sm:flex-1">
-          <p className="text-neutral-600 dark:text-neutral-400">{project.description}</p>
+          <p className="text-neutral-700 dark:text-neutral-300">{project.description}</p>
 
           <div className="mt-4 flex flex-wrap gap-1.5">
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full bg-neutral-100 px-2.5 py-0.5 font-mono text-xs text-neutral-600 dark:bg-neutral-800 dark:text-neutral-400"
+                className="rounded-full bg-neutral-100 px-2.5 py-0.5 text-xs text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
               >
                 {tech}
               </span>

@@ -6,63 +6,51 @@ Single-page personal portfolio site for Jacob Nguyen, a CS grad (UC Davis, June 
 ## Tech Stack
 - React + Vite
 - Tailwind CSS
-- Framer Motion for light transitions (optional, matches Salon Menu project style)
+- Framer Motion for light transitions (fade/slide-in on scroll, eased page-load entrance for the hero)
 - Deploy target: Vercel, GitHub-integrated for CI/CD on push to `main`
 
 ## Structure
-Single-page scrolling site, sections mirror resume order:
-1. Header — persistent, includes name and contact links (email, LinkedIn, GitHub)
-2. Hero — name, title ("Software Engineer" or "CS Grad, UC Davis"), one-line pitch, resume download button
-3. Education — UC Davis, BS Computer Science, Jun 2026
-4. Experience — Monterey Peninsula College software developer role
-5. Projects — 4 projects (Salon Menu, Rate My Stuff, Outdone, Leetweak), 3-column grid on desktop (wraps to 1 column on mobile)
-6. Skills — grouped by category (Languages, Frontend, Backend, Databases, Tools)
-7. Footer — contact links repeated (email, LinkedIn, GitHub)
+Single-page scrolling site, in this fixed order:
+1. Header — sticky, includes photo, name, nav, and contact links (email, GitHub, LinkedIn)
+2. Hero — name, headline, one-line pitch, resume download + primary CTAs, and a footer-style contact link row
+3. Education
+4. Experience — reverse-chronological, most SWE-relevant roles first
+5. Projects — one full-width card per project (title, description, tech stack, GitHub link, live demo link when available, screenshot when available)
+6. Skills — grouped by category (Languages, Frontend, Backend, Databases, Tools & Platforms, Soft Skills)
+7. Footer — contact links repeated (email, GitHub, LinkedIn, resume)
 
-## Content Source (from resume)
+## Content Source
 
-**Contact:** jacobptnguyen@gmail.com | linkedin.com/in/jacob-nguyen | github.com/jacobptnguyen
+**`src/data.js` is the single source of truth for all site content** — contact info, education, experience, projects, and skills. Do not hardcode content into this file (CLAUDE.md); resumes, roles, and projects change over time and a content snapshot here will drift out of sync with the real data and go stale. When content needs updating, edit `src/data.js` directly and follow the writing guidelines below.
 
-**Education:** University of California, Davis — BS Computer Science, Graduated Jun 2026
+## Content Writing Guidelines
 
-**Experience:**
-- Software Developer, Monterey Peninsula College (Jun–Jul 2024)
-  - Built a data visualization tool in Component Pascal (BlackBox Framework) parsing arbitrary CSVs into a linked-list structure, dynamically rendering histograms
-  - Designed a binning algorithm for multi-histogram rendering, mentored by an industry mentor at Applied Solar Energy
+Apply these to every bullet, description, and headline added to `src/data.js`:
 
-**Projects:**
-- **Salon Menu** (2026) — React, Vite, Tailwind CSS, JavaScript, Framer Motion, Vercel. Mobile-first digital nail polish menu, 25+ colors across 4 categories. Three-level nav (categories → colors → zoom) with Framer Motion transitions and swatch fallback. Accessible UI: semantic buttons, text labels for keyboard/colorblind users.
-  - GitHub: https://github.com/jacobptnguyen/salon-menu
-- **Rate My Stuff** (Aug 2026) — MERN, Express, MongoDB, Mongoose, TypeScript, Render. Full-stack app, RESTful API, full CRUD for ratings/comments/images. Responsive React/TypeScript frontend with React Router. Deployed to Render with GitHub CI/CD.
-  - GitHub: https://github.com/jacobptnguyen/rate-my-stuff
-- **Outdone** (Aug 2026) — Python, Flask, Anthropic API, cron. Full-stack personal automation tool integrating the Anthropic API, Gmail SMTP, and cron scheduling, with a self-contained JSON-based data layer requiring no database. Includes a Flask web UI for CRUD-style goal management and a dedup algorithm with fallback logic to prevent repetitive output.
-  - GitHub: https://github.com/jacobptnguyen/outdone
-- **Leetweak** (Aug 2026) — Python, Streamlit, GraphQL. Full-stack local analytics tool that integrates with LeetCode's public GraphQL API to rank topic proficiency and recommend targeted practice problems, replacing a multi-step manual workflow with a single automated fetch-rank-filter pipeline.
-  - GitHub: https://github.com/jacobptnguyen/leetweak
-
-**Technical Skills:**
-- Languages: JavaScript, TypeScript, Python, Component Pascal, HTML/CSS
-- Frontend: React, React Router, Tailwind CSS, Framer Motion, Vite, Streamlit
-- Backend: Node.js, Express, Flask, RESTful APIs, GraphQL
-- Databases: MongoDB, Mongoose
-- Tools & Platforms: Git, GitHub, Vercel, Render, CI/CD, cron, Anthropic API
-
-**Resume source of truth:** `Jacob_Nguyen_resume.pdf`. Sections: Education, Experience (Monterey Peninsula College), Projects (Salon Menu, Rate My Stuff, Outdone, Leetweak), and Technical Skills — matches Content Source above.
+- **Lead with an action verb.** Built, Resolved, Merged, Designed, Escalated, Replaced, Directed — never "Responsible for" or "Worked on."
+- **Follow an XYZ shape:** accomplished [X], measured by [Y], by doing [Z]. State the concrete outcome first, back it with a number, then explain the method — not the other way around.
+- **Prioritize metrics, and put them early.** Counts, percentages, and scale ("120+ unique visitors," "25+ interactive cards," "20+ IT tickets," "full CRUD REST API") belong at the front of a sentence, not buried at the end.
+- **Prefer measurable/concrete language over generic claims** — "full CRUD," "CI/CD deploy," "20+ tickets resolved" over vague claims like "helped with support" or "worked on the backend."
 
 ## Standard Portfolio Practices to Follow
 - Project-first: top projects visible near the top, no long scroll to reach them
-- Each project card shows: name, tech stack, 1-2 line outcome/description, GitHub link, live demo link
-- Prefer measurable/concrete descriptions over generic ones ("full CRUD," "CI/CD deploy," "25+ colors across 4 categories") — reuse resume bullet phrasing, don't dilute it
+- Each project card shows: name, tech stack, 1-2 line outcome/description, GitHub link, live demo link when one exists
 - Resume available as a direct PDF download/link, not just embedded text
-- Contact info (email + GitHub + LinkedIn) visible without hunting, ideally in header/hero and footer
+- Contact info (email + GitHub + LinkedIn) visible without hunting — in header, hero, and footer
 - Mobile-first responsive layout
-- Accessible by default: semantic HTML, labeled interactive elements, sufficient color contrast — consistent with the accessibility work already shown in the Salon Menu project
+- Accessible by default: semantic HTML, labeled interactive elements, sufficient color contrast
+- Only list a skill if it's demonstrated by something currently shown on the site (a project, a role, a bullet) — remove skills whose only backing project/entry gets removed
 - Ship fast: get a live, working v1 deployed before polishing further
 
 ## Design Notes
 - Keep visual style consistent with Salon Menu (Tailwind + Framer Motion aesthetic) since it's Jacob's most polished frontend work
 - Favor a clean, minimal, dark-or-light neutral palette over heavy branding — let projects speak
-- Use monospace or code-adjacent accents sparingly (e.g., section labels) to signal "developer portfolio" without being gimmicky
+- Use a single font family across the entire site (the default sans stack) — no monospace/code-style accents on dates, tags, labels, or anywhere else; consistency reads cleaner than a "developer portfolio" gimmick
 - Visibility and clarity first: strong contrast, generous whitespace, clear visual hierarchy (headline > section titles > body text) so key info is never buried
+- **Text color contrast floor (Tailwind neutral scale) — do not go lighter than these:**
+  - Primary text (names, headings): `neutral-900` light / `neutral-100` dark
+  - Body and link text: `neutral-700` light / `neutral-300` dark
+  - Muted/tertiary text (dates, category labels, captions): `neutral-600` light / `neutral-400` dark
+  - Never use `neutral-500` or lighter (light mode) / `neutral-500` or lighter (dark mode) for any text meant to be read — it's too faint. `neutral-500` is reserved for non-text decoration only (e.g., icon-only elements), and hover states may dip toward the base tier but never below it.
 - Every interactive element (links, buttons, nav) has an obvious, legible state — no low-contrast text or unlabeled icons
 - Smooth animations throughout via Framer Motion: fade/slide-in on scroll for sections, subtle hover transitions on project cards and buttons, eased page-load entrance for the hero — motion should feel polished, not distracting, and respect `prefers-reduced-motion`

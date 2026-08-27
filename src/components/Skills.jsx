@@ -6,11 +6,11 @@ export default function Skills() {
   return (
     <section id="skills" className="mx-auto max-w-5xl px-6 py-10">
       <Reveal>
-        <SectionHeading index="04" title="Skills" />
+        <SectionHeading title="Skills" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skills.map((group) => (
             <div key={group.category}>
-              <h3 className="font-mono text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-500">
+              <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
                 {group.category}
               </h3>
               <div className="mt-3 flex flex-wrap gap-2">

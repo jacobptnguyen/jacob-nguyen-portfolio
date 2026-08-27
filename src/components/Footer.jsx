@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
           <a
             href={`mailto:${contact.email}`}
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             {contact.email}
           </a>
@@ -15,7 +15,7 @@ export default function Footer() {
             href={contact.github}
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             GitHub
           </a>
@@ -23,14 +23,14 @@ export default function Footer() {
             href={contact.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             LinkedIn
           </a>
           <a
             href={resumeUrl}
             download
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             Resume
           </a>

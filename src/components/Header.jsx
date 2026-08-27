@@ -32,7 +32,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+              className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
             >
               {link.label}
             </a>
@@ -43,7 +43,7 @@ export default function Header() {
           <a
             href={`mailto:${contact.email}`}
             aria-label="Email Jacob Nguyen"
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             Email
           </a>
@@ -52,7 +52,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Jacob Nguyen on GitHub"
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             GitHub
           </a>
@@ -61,7 +61,7 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
             aria-label="Jacob Nguyen on LinkedIn"
-            className="text-sm font-medium text-neutral-600 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-100"
+            className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
           >
             LinkedIn
           </a>

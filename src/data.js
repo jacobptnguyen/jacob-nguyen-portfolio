@@ -7,12 +7,48 @@ export const contact = {
 export const education = {
   school: 'University of California, Davis',
   degree: 'BS Computer Science',
+  gpa: '3.59',
   date: 'Graduated Jun 2026',
 }
 
 export const experience = [
   {
-    role: 'Software Engineer',
+    role: 'Gen AI + Full Stack Intern',
+    org: 'Think Round',
+    employmentType: 'Internship',
+    date: 'Aug 2026 – Present',
+    bullets: [
+      'Built macro-chatbot, a local CLI tool that generates an original recipe from whatever ingredients are on hand and returns an exact calorie, protein, carb, and fat breakdown from a real nutrition lookup, closing the gap between recipe apps that assume you know what to cook and macro trackers that assume you know what you ate.',
+    ],
+    links: [{ label: 'macro-chatbot on GitHub', href: 'https://github.com/jacobptnguyen/macro-chatbot' }],
+  },
+  {
+    role: 'Open Source Contributor',
+    org: 'freeCodeCamp',
+    employmentType: 'Open Source',
+    date: 'Aug 2026',
+    bullets: [
+      'Replaced regex-based test assertions with behavior-based tests in a JavaScript workshop, part of a broader curriculum-wide initiative to make grading more reliable for learners.',
+      "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
+    ],
+    links: [
+      { label: 'PR #69515', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69515' },
+      { label: 'PR #69475', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69475' },
+    ],
+  },
+  {
+    role: 'IT Intern',
+    org: 'Hartnell College',
+    employmentType: 'Internship',
+    date: 'Aug 2026 – Present',
+    bullets: [
+      'Resolved 20+ IT tickets, including password resets, DUO MFA setup, account lockouts, and campus badge access, communicating with students by phone and Ebbot Chat while staying calm and clear with those who were frustrated or racing to get back into class before a deadline.',
+      'Triaged issues in real time, distinguishing what could be resolved directly from what needed escalation, and communicated technical details clearly to coworkers when handing off inactive-account, missing-student-ID, or badge-access issues.',
+      "Directed students to the right resource when a request fell outside IT's scope, reducing back-and-forth and getting them to the correct department faster.",
+    ],
+  },
+  {
+    role: 'Software Engineer Intern',
     org: 'Monterey Peninsula College',
     employmentType: 'Internship',
     date: 'Jun – Jul 2024',
@@ -32,16 +68,12 @@ export const projects = [
   {
     name: 'Salon Menu',
     date: 'Aug 2026 – Present',
-    stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'Vercel'],
+    stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
     description:
-      'Mobile-first digital nail polish menu with 25+ colors across 4 categories. Three-level nav (categories → colors → zoom) with Framer Motion transitions and swatch fallback. Accessible UI with semantic buttons and text labels for keyboard/colorblind users.',
+      '120+ unique visitors and counting. Redesigned from a three-level nav (categories → colors → zoom) into a single scrollable gallery of 25+ color cards, each independently pinch-zoomable, pannable, and rotatable right in place.',
     github: 'https://github.com/jacobptnguyen/salon-menu',
-    demo: null,
-    images: [
-      { src: '/images/salon-menu-categories.jpg', alt: 'Salon Menu categories screen' },
-      { src: '/images/salon-menu-colors.jpg', alt: 'Salon Menu color list screen' },
-      { src: '/images/salon-menu-zoom.jpg', alt: 'Salon Menu color zoom screen' },
-    ],
+    demo: 'https://salon-menu-jade.vercel.app/',
+    image: { src: '/images/salon-menu-gallery.jpg', alt: 'Salon Menu single-screen scrollable gallery' },
   },
   {
     name: 'Rate My Stuff',
@@ -50,28 +82,8 @@ export const projects = [
     description:
       'Full-stack app with a RESTful API and full CRUD for ratings, comments, and images. Responsive React/TypeScript frontend with React Router, deployed to Render with GitHub CI/CD.',
     github: 'https://github.com/jacobptnguyen/rate-my-stuff',
-    demo: null,
+    demo: 'https://rate-my-stuff.onrender.com/',
     image: { src: '/images/rate-my-stuff.jpg', alt: 'Rate My Stuff item rating card screenshot' },
-  },
-  {
-    name: 'Leetweak',
-    date: 'Aug 2026',
-    stack: ['Python', 'Streamlit', 'requests', 'pandas'],
-    description:
-      "Local app that reads a public LeetCode profile via LeetCode's GraphQL endpoint, ranks problem tags by relative weakness, and recommends one unsolved, non-premium problem to close the gap.",
-    github: 'https://github.com/jacobptnguyen/leetweak',
-    demo: null,
-    image: { src: '/images/leetweak.jpg', alt: 'Leetweak weakest-topic dashboard screenshot' },
-  },
-  {
-    name: 'Outdone',
-    date: 'Aug 2026',
-    stack: ['Python', 'Flask', 'Anthropic API (Claude Haiku)', 'smtplib', 'cron'],
-    description:
-      'Periodically emails a fake "friend just hit your goal" update as a lighthearted motivation nudge. Flask UI for managing goals, JSON files as the data layer, cron-scheduled daily send via Gmail SMTP.',
-    github: 'https://github.com/jacobptnguyen/outdone',
-    demo: null,
-    image: { src: '/images/outdone.jpg', alt: 'Outdone motivational nudge email screenshot' },
   },
 ]
 
@@ -82,11 +94,11 @@ export const skills = [
   },
   {
     category: 'Frontend',
-    items: ['React', 'React Router', 'Tailwind CSS', 'Framer Motion', 'Vite'],
+    items: ['React', 'React Router', 'Tailwind CSS', 'Framer Motion', 'Vite', 'react-zoom-pan-pinch'],
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'Flask', 'RESTful APIs'],
+    items: ['Node.js', 'Express', 'RESTful APIs'],
   },
   {
     category: 'Databases',
@@ -94,7 +106,22 @@ export const skills = [
   },
   {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Vercel', 'Render', 'CI/CD', 'Streamlit', 'cron'],
+    items: ['Git', 'GitHub', 'Vercel', 'Vercel Web Analytics', 'Render', 'CI/CD', 'DUO MFA'],
+  },
+  {
+    category: 'Soft Skills',
+    items: [
+      'Communication',
+      'Active Listening',
+      'Patience',
+      'Problem-Solving',
+      'Time Management',
+      'Conflict Resolution',
+      'Customer Service',
+      'Teamwork',
+      'Adaptability',
+      'Attention to Detail',
+    ],
   },
 ]
 

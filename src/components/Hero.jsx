@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="flex-1">
           <motion.p
             variants={item}
-            className="font-mono text-sm font-medium text-neutral-500 dark:text-neutral-400"
+            className="text-sm font-medium text-neutral-600 dark:text-neutral-400"
           >
             hi, I&apos;m
           </motion.p>
@@ -42,17 +42,17 @@ export default function Hero() {
             variants={item}
             className="mt-3 text-lg font-medium text-neutral-700 dark:text-neutral-300 sm:text-xl"
           >
-            Aspiring SWE | UC Davis CS &rsquo;26 | Full-Stack: React, Node, TypeScript
+            Gen AI + Full Stack Intern @ Think Round | IT Intern @ Hartnell College | Open Source
+            Contributor | UC Davis CS &rsquo;26
           </motion.p>
           <motion.p
             variants={item}
-            className="mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-400 sm:text-lg"
+            className="mt-4 max-w-2xl text-base text-neutral-700 dark:text-neutral-300 sm:text-lg"
           >
-            Full-stack developer with hands-on React, Node/Express, Flask, and MongoDB
-            experience, and deployments across Vercel and Render. Shipped 4 production apps,
-            including a full CRUD REST API with CI/CD and a mobile-first UI with 25+ interactive
-            components. B.S. Computer Science, UC Davis. Seeking a junior or entry-level software
-            engineering role.
+            Currently a Gen AI + Full Stack Intern at Think Round and an IT Intern at Hartnell
+            College, with hands-on React, Node/Express, and MongoDB experience. My project Salon
+            Menu has had 120+ unique visitors and 25+ interactive cards. B.S. Computer
+            Science, UC Davis. Seeking roles in software engineering.
           </motion.p>
 
           <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-4">
@@ -69,11 +69,33 @@ export default function Hero() {
             >
               View Projects
             </a>
+          </motion.div>
+
+          <motion.div
+            variants={item}
+            className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2"
+          >
             <a
               href={`mailto:${contact.email}`}
-              className="text-sm font-medium text-neutral-600 underline decoration-neutral-300 underline-offset-4 transition-colors hover:text-neutral-900 dark:text-neutral-400 dark:decoration-neutral-700 dark:hover:text-neutral-100"
+              className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
             >
               {contact.email}
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+            >
+              GitHub
+            </a>
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-neutral-700 transition-colors hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-neutral-100"
+            >
+              LinkedIn
             </a>
           </motion.div>
         </div>

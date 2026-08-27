@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-10">
       <Reveal>
-        <SectionHeading index="03" title="Projects" />
+        <SectionHeading title="Projects" />
       </Reveal>
       <div className="space-y-6">
         {projects.map((project) => (
