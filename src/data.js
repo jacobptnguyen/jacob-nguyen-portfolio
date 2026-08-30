@@ -6,7 +6,7 @@ export const contact = {
 
 export const education = {
   school: 'University of California, Davis',
-  degree: 'BS Computer Science',
+  degree: 'B.S. Computer Science, Minor in Statistics',
   gpa: '3.59',
   date: 'Graduated Jun 2026',
 }
@@ -18,7 +18,7 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Built macro-chatbot, a local CLI tool that generates an original recipe from whatever ingredients are on hand and returns an exact calorie, protein, carb, and fat breakdown from a real nutrition lookup, closing the gap between recipe apps that assume you know what to cook and macro trackers that assume you know what you ate.',
+      'Built macro-chatbot, a chatbot that generates an original recipe from whatever ingredients are on hand and returns an exact calorie, protein, carb, and fat breakdown from a real nutrition lookup, closing the gap between recipe apps that assume you know what to cook and macro trackers that assume you know what you ate.',
     ],
     links: [{ label: 'macro-chatbot on GitHub', href: 'https://github.com/jacobptnguyen/macro-chatbot' }],
   },
@@ -69,7 +69,7 @@ export const projects = [
     name: 'Salon Menu',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
     bullets: [
-      'Drove 120+ unique visitors via QR-code scans with a single-screen gallery of 25+ interactable cards, independently pinch-zoomable, pannable, and rotatable, built with React.',
+      'Drove 220+ unique visitors via QR-code scans with a single-screen gallery of 25+ interactable cards, independently pinch-zoomable, pannable, and rotatable, built with React.',
       'Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the app backend-free and accessible (semantic buttons, reduced-motion support).',
     ],
     github: 'https://github.com/jacobptnguyen/salon-menu',
