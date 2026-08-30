@@ -51,7 +51,7 @@ export default function Hero() {
           >
             Currently a Gen AI + Full Stack Intern at Think Round and an IT Intern at Hartnell
             College, with hands-on React, Node/Express, and MongoDB experience. My project Salon
-            Menu has had 120+ unique visitors and 25+ interactive cards. B.S. Computer
+            Menu has had 220+ unique visitors and 25+ interactive cards. B.S. Computer
             Science, UC Davis. Seeking roles in software engineering.
           </motion.p>
 
