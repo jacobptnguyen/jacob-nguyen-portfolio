@@ -50,8 +50,9 @@ export default function Hero() {
             className="mt-4 max-w-2xl text-base text-neutral-700 dark:text-neutral-300 sm:text-lg"
           >
             Currently a Gen AI + Full Stack Intern at Think Round and an IT Intern at Hartnell
-            College, with hands-on React, Node/Express, and MongoDB experience. My project Salon
-            Menu has had 220+ unique visitors and 25+ interactive cards. B.S. Computer
+            College, with hands-on experience across React, Next.js, Flask, and the Claude API.
+            My project AutoFit turns a raw CSV upload into a fitted ML model with zero ML
+            expertise required, and Salon Menu has drawn 220+ unique visitors. B.S. Computer
             Science, UC Davis. Seeking roles in software engineering.
           </motion.p>
 

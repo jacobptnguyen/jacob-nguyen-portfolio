@@ -16,7 +16,7 @@ Single-page scrolling site, in this fixed order:
 3. Education
 4. Experience — reverse-chronological, most SWE-relevant roles first
 5. Projects — one full-width card per project (title, bulleted description, tech stack, GitHub link, live demo link when available, screenshot when available)
-6. Skills — grouped by category (Languages, Frontend, Backend, Databases, Tools & Platforms, Soft Skills)
+6. Skills — grouped by category (Languages, Frontend, Backend, Databases, AI/ML & APIs, Tools & Platforms, Soft Skills)
 7. Footer — contact links repeated (email, GitHub, LinkedIn, resume)
 
 ## Content Source

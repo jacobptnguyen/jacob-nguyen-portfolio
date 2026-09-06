@@ -18,7 +18,7 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Built macro-chatbot, a chatbot that generates an original recipe from whatever ingredients are on hand and returns an exact calorie, protein, carb, and fat breakdown from a real nutrition lookup, closing the gap between recipe apps that assume you know what to cook and macro trackers that assume you know what you ate.',
+      'Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a RAG pipeline over USDA FoodData Central, with recipe generation on Claude and automatic failover to a local Ollama model.',
     ],
     links: [{ label: 'macro-chatbot on GitHub', href: 'https://github.com/jacobptnguyen/macro-chatbot' }],
   },
@@ -28,10 +28,12 @@ export const experience = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
+      "Replaced regex/string-matching test assertions with behavior-based assertions in freeCodeCamp's Linked List Workshop, letting learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
       'Replaced regex-based test assertions with behavior-based tests in a JavaScript workshop, part of a broader curriculum-wide initiative to make grading more reliable for learners.',
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
     ],
     links: [
+      { label: 'PR #69655', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69655' },
       { label: 'PR #69515', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69515' },
       { label: 'PR #69475', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69475' },
     ],
@@ -42,7 +44,7 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Resolved 20+ IT tickets, including password resets, DUO MFA setup, account lockouts, and campus badge access, communicating with students by phone and Ebbot Chat.',
+      'Resolved 50+ IT support requests from students and staff over the phone and via Ebbot Chat, including password resets, DUO MFA setup/troubleshooting, account lockouts, and campus badge access.',
       'Triaged issues in real time, distinguishing what could be resolved directly from what needed escalation, and communicated technical details clearly to coworkers when handing off inactive-account, missing-student-ID, or badge-access issues.',
       "Directed students to the right resource when a request fell outside IT's scope, reducing back-and-forth and getting them to the correct department faster.",
     ],
@@ -65,6 +67,17 @@ export const experience = [
 ]
 
 export const projects = [
+  {
+    name: 'AutoFit',
+    stack: ['Next.js', 'TypeScript', 'Flask', 'Python', 'scikit-learn', 'Claude API'],
+    bullets: [
+      'Built an end-to-end AutoML tool that turns a raw CSV upload into a fitted model, using Claude to pick the target variable, predictor columns, model type, and evaluation metrics so no ML expertise is required from the user.',
+      'Added a 1-5 data-quality score assessing completeness and authenticity rather than just predictions, manual override of any AI decision with instant client-side re-fitting, and production safeguards (4MB upload limit, 50K row cap, rate limiting, zero data persistence).',
+    ],
+    github: 'https://github.com/jacobptnguyen/AutoFit',
+    demo: 'https://auto-fit-pi.vercel.app',
+    image: { src: '/images/autofit.png', alt: 'AutoFit data-quality score and gradient boosting model results, showing predicted vs. actual price and feature importance' },
+  },
   {
     name: 'Salon Menu',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
@@ -96,19 +109,23 @@ export const skills = [
   },
   {
     category: 'Frontend',
-    items: ['React', 'React Router', 'Tailwind CSS', 'Framer Motion', 'Vite', 'react-zoom-pan-pinch'],
+    items: ['React', 'React Router', 'Next.js', 'Tailwind CSS', 'Vite', 'react-zoom-pan-pinch'],
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Express', 'RESTful APIs'],
+    items: ['Node.js', 'Express', 'RESTful APIs', 'Flask', 'scikit-learn'],
   },
   {
     category: 'Databases',
     items: ['MongoDB', 'Mongoose'],
   },
   {
+    category: 'AI/ML & APIs',
+    items: ['Claude API', 'RAG', 'Ollama', 'USDA FoodData Central API'],
+  },
+  {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Vercel', 'Vercel Web Analytics', 'Render', 'CI/CD', 'DUO MFA'],
+    items: ['Git', 'GitHub', 'Vercel', 'Render', 'CI/CD', 'DUO MFA'],
   },
   {
     category: 'Soft Skills',
