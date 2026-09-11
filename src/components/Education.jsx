@@ -1,23 +1,22 @@
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
+import Card from './Card'
 import { education } from '../data'
 
 export default function Education() {
   return (
-    <section id="education" className="mx-auto max-w-5xl px-6 py-10">
+    <section id="education" aria-labelledby="education-heading" className="mx-auto max-w-shell px-6 py-12">
       <Reveal>
-        <SectionHeading title="Education" />
-        <div className="rounded-lg border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900">
-          <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-            {education.school}
-          </h3>
-          <p className="mt-1 text-neutral-700 dark:text-neutral-300">
+        <SectionHeading id="education-heading" title="Education" />
+        <Card>
+          <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+            <h3 className="text-entry text-ink">{education.school}</h3>
+            <span className="text-date tabular-nums text-muted">{education.date}</span>
+          </div>
+          <p className="mt-1 text-org text-body">
             {education.degree} · GPA {education.gpa}
           </p>
-          <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-            {education.date}
-          </p>
-        </div>
+        </Card>
       </Reveal>
     </section>
   )

@@ -2,16 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ---- Beacon tokens -------------------------------------------------------
+   Light is the base; dark overrides only the values that change.
+   Every text tone is chosen to clear 4.5:1 against its ACTUAL background,
+   muted/tertiary text included. Lime is a ground, never ink.
+------------------------------------------------------------------------- */
+:root {
+  --bg: #fbfbf9;
+  --surface: #ffffff;
+  --ink: #101413;
+  --body: #3a423f;
+  --muted: #5a6360;
+  --border: #e3e5e0;
+  --chip: #f1f2ed;
+  --lime: #d9f24b;
+  --on-lime: #101413;
+  --link: #1f4d3d;
+  --mark: #1f4d3d; /* link underline: lime is invisible on a light ground */
+  --shadow: 0 1px 2px rgba(16, 20, 19, 0.05), 0 8px 24px -12px rgba(16, 20, 19, 0.14);
+  --shadow-hover: 0 1px 2px rgba(16, 20, 19, 0.06), 0 14px 32px -12px rgba(16, 20, 19, 0.2);
+  /* Lime has no contrast against a light ground, so any lime mark gets a
+     faint ink ring to stay visible. On dark it reads on its own. */
+  --lime-ring: 0 0 0 1px rgba(16, 20, 19, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101211;
+    --surface: #191c1b;
+    --ink: #f4f5f1;
+    --body: #d2d6d0;
+    --muted: #9ba29d;
+    --border: #262a29;
+    --chip: #232726;
+    --lime: #c7e63a;
+    --on-lime: #101211;
+    --link: #a9e0c4;
+    --mark: #c7e63a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 30px -14px rgba(0, 0, 0, 0.8);
+    --shadow-hover: 0 1px 2px rgba(0, 0, 0, 0.55), 0 16px 38px -14px rgba(0, 0, 0, 0.9);
+    --lime-ring: none;
+  }
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Long unbroken tokens (URLs, emails) must wrap rather than widen the page. */
+h1, h2, h3, p, li, a {
+  overflow-wrap: break-word;
+}
+
+/* Anchor targets clear the sticky header instead of hiding under it. */
+section[id],
+main[id] {
+  scroll-margin-top: 8.5rem;
+}
+
+@media (min-width: 640px) {
+  section[id],
+  main[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* One deliberate focus ring everywhere. --ink clears 3:1 in both themes. */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.lime-mark {
+  background-color: var(--lime);
+  box-shadow: var(--lime-ring);
+}
+
+/* Hero entrance runs in CSS, not JS, so the headline can never be gated
+   behind a script that is slow, blocked, or broken. */
+@keyframes rise {
+  from { opacity: 0.6; transform: translate3d(0, 8px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-rise {
+  animation: rise 0.26s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+  /* Gentler, not zero: opacity still resolves, movement does not. */
+  .hero-rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 180ms !important;
+  }
 }
 
-body {
-  @apply bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
+@media (prefers-contrast: more) {
+  :root {
+    --border: #6b736f;
+    --muted: #3f4744;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --border: #8b938f;
+      --muted: #c3cac5;
+    }
+  }
 }

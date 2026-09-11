@@ -4,6 +4,16 @@ export const contact = {
   github: 'https://github.com/jacobptnguyen',
 }
 
+export const hero = {
+  badge: 'Open to junior SWE roles',
+  name: 'Jacob Nguyen',
+  headline:
+    "Gen AI + Full Stack Intern @ Think Round | IT Intern @ Hartnell College | Open Source Contributor | UC Davis CS '26",
+  pitch:
+    'Currently a Gen AI + Full Stack Intern at Think Round and an IT Intern at Hartnell College, with hands-on experience across React, Next.js, Flask, and the Claude API. My project AutoFit turns a raw CSV upload into a fitted ML model with zero ML expertise required, and Salon Menu has drawn 220+ unique visitors. B.S. Computer Science, UC Davis. Seeking roles in software engineering.',
+  photo: { src: '/images/profile.png', alt: 'Jacob Nguyen' },
+}
+
 export const education = {
   school: 'University of California, Davis',
   degree: 'B.S. Computer Science, Minor in Statistics',
@@ -28,8 +38,7 @@ export const experience = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Replaced regex/string-matching test assertions with behavior-based assertions in freeCodeCamp's Linked List Workshop, letting learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
-      'Replaced regex-based test assertions with behavior-based tests in a JavaScript workshop, part of a broader curriculum-wide initiative to make grading more reliable for learners.',
+      "Merged 3 PRs into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across the Linked List and JavaScript workshops, so learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
     ],
     links: [
@@ -45,8 +54,6 @@ export const experience = [
     date: 'Aug 2026 – Present',
     bullets: [
       'Resolved 50+ IT support requests from students and staff over the phone and via Ebbot Chat, including password resets, DUO MFA setup/troubleshooting, account lockouts, and campus badge access.',
-      'Triaged issues in real time, distinguishing what could be resolved directly from what needed escalation, and communicated technical details clearly to coworkers when handing off inactive-account, missing-student-ID, or badge-access issues.',
-      "Directed students to the right resource when a request fell outside IT's scope, reducing back-and-forth and getting them to the correct department faster.",
     ],
   },
   {
@@ -125,11 +132,7 @@ export const skills = [
   },
   {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Vercel', 'Render', 'CI/CD', 'DUO MFA'],
-  },
-  {
-    category: 'Soft Skills',
-    items: ['Communication', 'Problem-Solving', 'Time Management', 'Customer Service'],
+    items: ['Git', 'GitHub', 'Vercel', 'Render', 'CI/CD'],
   },
 ]
 

@@ -9,8 +9,14 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div className="min-h-screen">
+      <a
+        href="#main"
+        className="sr-only rounded-full bg-ink px-5 py-3 text-date font-semibold text-bg focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60]"
+      >
+        Skip to content
+      </a>
       <Header />
-      <main>
+      <main id="main">
         <Hero />
         <Education />
         <Experience />

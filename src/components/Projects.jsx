@@ -5,17 +5,19 @@ import { projects } from '../data'
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-5xl px-6 py-10">
+    <section id="projects" aria-labelledby="projects-heading" className="mx-auto max-w-shell px-6 py-12">
       <Reveal>
-        <SectionHeading title="Projects" />
+        <SectionHeading id="projects-heading" title="Projects" />
       </Reveal>
-      <div className="space-y-6">
+      <ul className="space-y-4">
         {projects.map((project) => (
-          <Reveal key={project.name}>
-            <ProjectCard project={project} />
-          </Reveal>
+          <li key={project.name}>
+            <Reveal>
+              <ProjectCard project={project} />
+            </Reveal>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }
