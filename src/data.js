@@ -38,10 +38,11 @@ export const experience = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Merged 3 PRs into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across the Linked List and JavaScript workshops, so learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
+      "Merged 4 PRs into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across curriculum workshops and labs, so learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
     ],
     links: [
+      { label: 'PR #69956', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69956' },
       { label: 'PR #69655', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69655' },
       { label: 'PR #69515', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69515' },
       { label: 'PR #69475', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69475' },
