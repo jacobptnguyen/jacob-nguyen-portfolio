@@ -35,9 +35,7 @@ export const experience = [
       'Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a **RAG** pipeline over USDA FoodData Central, with recipe generation on **Claude** and automatic failover to a local **Ollama** model.',
     ],
     links: [
-      { label: 'Think Round PR #80', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pull/80' },
-      { label: 'PR #89', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pull/89' },
-      { label: 'PR #84', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pull/84' },
+      { label: '3 merged PRs on GitHub', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
       { label: 'macro-chatbot on GitHub', href: 'https://github.com/jacobptnguyen/macro-chatbot' },
     ],
   },
@@ -51,10 +49,7 @@ export const experience = [
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
     ],
     links: [
-      { label: 'PR #69956', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69956' },
-      { label: 'PR #69655', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69655' },
-      { label: 'PR #69515', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69515' },
-      { label: 'PR #69475', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pull/69475' },
+      { label: '4 merged PRs on GitHub', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
     ],
   },
   {
@@ -66,7 +61,7 @@ export const experience = [
       'Added a static upload-requirements hint to OpenRFM, an open-source customer-segmentation tool, listing the three required CSV columns (CustomerID, TransactionDate, TransactionAmount) before file selection to head off failed uploads caused by mismatched headers.',
     ],
     links: [
-      { label: 'PR #13', href: 'https://github.com/kamalu-chioma/OpenRFM/pull/13' },
+      { label: 'Upload column hint PR', href: 'https://github.com/kamalu-chioma/OpenRFM/pull/13' },
     ],
   },
   {
