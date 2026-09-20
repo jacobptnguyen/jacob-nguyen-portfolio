@@ -2,6 +2,7 @@ import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 import ProjectCard from './ProjectCard'
 import { projects } from '../data'
+import { slug } from '../slug'
 
 export default function Projects() {
   return (
@@ -11,7 +12,7 @@ export default function Projects() {
       </Reveal>
       <ul className="space-y-4">
         {projects.map((project) => (
-          <li key={project.name}>
+          <li key={project.name} id={slug(project.name)}>
             <Reveal>
               <ProjectCard project={project} />
             </Reveal>

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Education from './components/Education'
@@ -7,6 +8,17 @@ import Skills from './components/Skills'
 import Footer from './components/Footer'
 
 export default function App() {
+  // The browser tries its fragment scroll before React has rendered the target,
+  // and lazy images shift layout afterwards, so deep links like /#freecodecamp
+  // never land on their own. Re-run the scroll once images have settled.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (!id) return
+    const go = () => document.getElementById(id)?.scrollIntoView()
+    if (document.readyState === 'complete') go()
+    else window.addEventListener('load', go, { once: true })
+  }, [])
+
   return (
     <div className="min-h-screen">
       <a

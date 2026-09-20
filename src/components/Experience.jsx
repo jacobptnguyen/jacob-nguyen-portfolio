@@ -4,6 +4,7 @@ import Card from './Card'
 import Bullets from './Bullets'
 import { ExternalLink } from './Links'
 import { experience } from '../data'
+import { slug } from '../slug'
 
 export default function Experience() {
   return (
@@ -13,7 +14,7 @@ export default function Experience() {
       </Reveal>
       <ul className="space-y-4">
         {experience.map((job) => (
-          <li key={`${job.role}-${job.org}`}>
+          <li key={`${job.role}-${job.org}`} id={slug(job.org)}>
             <Reveal>
               <Card>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">

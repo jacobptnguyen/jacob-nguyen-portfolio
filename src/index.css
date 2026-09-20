@@ -62,13 +62,15 @@ h1, h2, h3, p, li, a {
 
 /* Anchor targets clear the sticky header instead of hiding under it. */
 section[id],
-main[id] {
+main[id],
+li[id] {
   scroll-margin-top: 8.5rem;
 }
 
 @media (min-width: 640px) {
   section[id],
-  main[id] {
+  main[id],
+  li[id] {
     scroll-margin-top: 6rem;
   }
 }
