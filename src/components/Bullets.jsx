@@ -1,3 +1,5 @@
+import Rich from './Rich'
+
 export default function Bullets({ items }) {
   return (
     <ul className="space-y-2.5">
@@ -7,7 +9,9 @@ export default function Bullets({ items }) {
             aria-hidden="true"
             className="lime-mark mt-[0.5em] h-[0.4rem] w-[0.4rem] shrink-0 rounded-[2px]"
           />
-          <span className="min-w-0">{item}</span>
+          <span className="min-w-0">
+            <Rich text={item} />
+          </span>
         </li>
       ))}
     </ul>

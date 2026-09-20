@@ -1,0 +1,136 @@
+\documentclass[letterpaper,10.5pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{url}
+\input{glyphtounicode}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+\pdfgentounicode=1
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-3pt}}}
+}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\normalsize #1} & \normalsize #2 \\[-1pt]
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize #1 & \normalsize #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Jacob Nguyen} \\ \vspace{1pt}
+    \small 831-905-7478 $|$
+    \href{mailto:jacobptnguyen@gmail.com}{jacobptnguyen@gmail.com} $|$
+    \href{http://www.linkedin.com/in/jacob-nguyen-138267262}{linkedin.com/in/jacob-nguyen} $|$
+    \href{https://github.com/jacobptnguyen}{github.com/jacobptnguyen} $|$
+    \href{https://jacob-nguyen-portfolio.vercel.app/}{jacob-nguyen-portfolio.vercel.app}
+\end{center}
+%----------EDUCATION----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of California, Davis}{Davis, CA}
+      {B.S. Computer Science, Minor in Statistics $|$ GPA: 3.59/4.0}{Graduated Jun 2026}
+  \resumeSubHeadingListEnd
+%----------EXPERIENCE----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Gen AI + Full Stack Intern}{Aug 2026 -- Present}
+      {Think Round}{San Francisco, CA (Remote)}
+      \resumeItemListStart
+        \resumeItem{Shipped \textbf{3} merged PRs into Think Round's production \textbf{Next.js}/\textbf{TypeScript} site, building a Communities section with a list/grid toggle for the Paradise Project page and extending the \textbf{Sanity CMS} schema with a new subtitle field}
+        \resumeItem{Eliminated stale exhibit content on the Paradise Project page by adding ISR revalidation (revalidate = 30), so \textbf{Sanity} publishes appear within 30 seconds instead of waiting on a full redeploy}
+        \resumeItem{Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a \textbf{RAG} pipeline over USDA FoodData Central, with recipe generation on \textbf{Claude} and automatic failover to a local \textbf{Ollama} model}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Open Source Contributor}{Aug 2026 -- Present}
+      {Various Projects}{Remote}
+      \resumeItemListStart
+        \resumeItem{Merged \textbf{4 PRs} into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across curriculum workshops and labs, so learner solutions using arrow functions or alternate styles pass without weakening test rigor}
+        \resumeItem{Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension}
+        \resumeItem{Contributed to OpenRFM, an open-source customer-segmentation tool, adding an upload-requirements hint that surfaces required CSV columns before file selection to reduce failed uploads}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineer Intern}{Jun 2024 -- Jul 2024}
+      {Monterey Peninsula College}{Monterey, CA}
+      \resumeItemListStart
+        \resumeItem{Built a data visualization tool in Component Pascal (BlackBox Framework) parsing arbitrary CSVs into a linked-list structure, dynamically rendering histograms}
+        \resumeItem{Designed a binning algorithm for multi-histogram rendering, mentored by an industry mentor at Applied Solar Energy}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%----------PROJECTS----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{AutoFit} $|$ Next.js, TypeScript, Flask, Python, scikit-learn, Claude API $|$ \href{https://auto-fit-pi.vercel.app}{Live Demo}}{}
+          \resumeItemListStart
+            \resumeItem{Built an end-to-end AutoML tool that turns a raw CSV upload into a fitted model, using \textbf{Claude} to pick the target variable, predictor columns, model type, and evaluation metrics so no ML expertise is required from the user}
+            \resumeItem{Added a 1-5 data-quality score assessing completeness and authenticity rather than just predictions, manual override of any AI decision with instant client-side re-fitting, and production safeguards (4MB upload limit, 50K row cap, rate limiting, zero data persistence)}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Salon Menu} $|$ React, Vite, Tailwind CSS, JavaScript $|$ \href{https://salon-menu-jade.vercel.app/}{Live Demo}}{}
+          \resumeItemListStart
+            \resumeItem{Reached \textbf{450+} unique visitors with a QR-code menu that replaced a salon's single shared swatch binder, where one customer browsing left everyone else waiting. Built the gallery as \textbf{30+} independently pinch-zoomable, pannable, and rotatable cards on one screen}
+            \resumeItem{Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the static bundle backend-free and accessible (semantic buttons, reduced-motion support)}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Salon Calendar} $|$ React, Vite, Tailwind CSS, Supabase, PostgreSQL $|$ \href{https://saloncalendar.vercel.app/}{Live Demo}}{}
+          \resumeItemListStart
+            \resumeItem{Captured \textbf{35+} real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via \textbf{Supabase} Realtime}
+            \resumeItem{Engineered a time parser across \textbf{36} asserted cases, letting staff type appointments as written on paper (``230 Full set'', ``2;30''), storing plain date and time columns so UTC conversion never shifts a booking a day}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Rate My Stuff} $|$ MERN, Express, MongoDB, Mongoose, TypeScript $|$ \href{https://rate-my-stuff.onrender.com/}{Live Demo}}{}
+          \resumeItemListStart
+            \resumeItem{Engineered a \textbf{RESTful API} in \textbf{Node.js}/\textbf{Express} with \textbf{full CRUD} for ratings, comments, and images, backed by \textbf{MongoDB}/Mongoose}
+            \resumeItem{Built a responsive \textbf{React}/\textbf{TypeScript} frontend with \textbf{React Router}, deployed to Render with \textbf{GitHub} CI/CD}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+%----------TECHNICAL SKILLS----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \normalsize{\item{
+     \textbf{Languages}: JavaScript, TypeScript, Python, HTML/CSS \\
+     \textbf{Frameworks \& Libraries}: React, React Router, Next.js, Node.js, Express, Tailwind CSS, Vite, Flask \\
+     \textbf{Databases}: PostgreSQL, Supabase, MongoDB \\
+     \textbf{AI/ML \& APIs}: Claude API, RAG, Ollama, scikit-learn \\
+     \textbf{Tools \& Platforms}: Git, GitHub, Vercel, Sanity CMS
+    }}
+ \end{itemize}
+\end{document}

@@ -25,12 +25,12 @@ Single-page scrolling site. **Section order mirrors the résumé (`resume/resume
 
 ## Content Writing Guidelines
 
-Apply these to every bullet, description, and headline added to `src/data.js`:
+Apply these to every bullet, description, and headline in `src/data.js` and `resume/resume.tex`.
 
-- **Lead with an action verb.** Built, Resolved, Merged, Designed, Escalated, Replaced, Directed — never "Responsible for" or "Worked on."
-- **Follow an XYZ shape:** accomplished [X], measured by [Y], by doing [Z]. State the concrete outcome first, back it with a number, then explain the method — not the other way around.
-- **Prioritize metrics, and put them early.** Counts, percentages, and scale ("120+ unique visitors," "25+ interactive cards," "20+ IT tickets," "full CRUD REST API") belong at the front of a sentence, not buried at the end.
-- **Prefer measurable/concrete language over generic claims** — "full CRUD," "CI/CD deploy," "20+ tickets resolved" over vague claims like "helped with support" or "worked on the backend."
+- **Lead with an action verb.** Built, Resolved, Merged, Shipped, Replaced, Eliminated. Never "Responsible for" or "Worked on."
+- **Follow an XYZ shape:** accomplished [X], measured by [Y], by doing [Z]. Outcome first, evidence second, method last.
+- **A metric must measure impact, not volume.** Adoption, time saved, scale handled, problems eliminated are worth front-loading. Lines of code, file counts, commit counts, PR counts and hours spent are not: they measure how much work happened, not whether it mattered.
+- **Put the metric in the first few words.** Recruiters read in an L: down the left edge, then across whatever catches them. A number buried mid-sentence is a number nobody sees. The shape is action verb, then metric, then context: "Reached 450+ unique visitors with a QR-code menu that replaced the salon's one shared binder", never "Replaced the salon's one shared binder ... Reached 450+ unique visitors." Keeping the problem statement is still required, it just moves behind the number instead of in front of it.
 
 ## Standard Portfolio Practices to Follow
 - Section order follows the résumé, not a general "projects first" heuristic — see Structure above. Within Projects, the strongest project leads.

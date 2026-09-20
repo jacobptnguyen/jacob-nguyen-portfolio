@@ -1,25 +1,19 @@
 import { contact, hero, resumeUrl } from '../data'
 import { ContactRow } from './Links'
+import Rich from './Rich'
 
 export default function Hero() {
   return (
     <section id="top" aria-labelledby="hero-name" className="mx-auto max-w-shell px-6 pb-14 pt-12 sm:pt-20">
       <div className="hero-rise flex flex-col-reverse gap-10 sm:flex-row sm:items-start sm:justify-between">
         <div className="min-w-0 flex-1">
-          {hero.badge && (
-            <p className="lime-mark mb-5 inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-label text-on-lime">
-              <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-on-lime" />
-              {hero.badge}
-            </p>
-          )}
-
           <h1 id="hero-name" className="text-display text-ink">
             {hero.name}
           </h1>
 
           <p className="mt-4 max-w-2xl text-headline font-semibold text-ink">{hero.headline}</p>
 
-          <p className="mt-4 max-w-2xl text-lede text-body">{hero.pitch}</p>
+          <p className="mt-4 max-w-2xl text-lede text-body"><Rich text={hero.pitch} /></p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
