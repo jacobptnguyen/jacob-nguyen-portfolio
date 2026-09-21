@@ -7,7 +7,7 @@ export const contact = {
 export const hero = {
   name: 'Jacob Nguyen',
   headline:
-    "Gen AI + Full Stack Intern @ Think Round | Open Source Contributor | UC Davis CS '26",
+    "Gen AI + Full Stack Intern @ Think Round | IT Intern @ Hartnell College | Open Source Contributor | UC Davis CS '26",
   pitch:
     "I build things that take a step out of someone's day. **AutoFit** turns a raw CSV into a "
     + "fitted model with no ML expertise, and two apps replaced a local salon's paper appointment "
@@ -50,6 +50,16 @@ export const experience = [
     ],
     links: [
       { label: '4 merged PRs on GitHub', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
+    ],
+  },
+  {
+    role: 'IT Intern',
+    org: 'Hartnell College',
+    employmentType: 'Internship',
+    date: 'Aug 2026 – Present',
+    bullets: [
+      'Resolved **50+** IT support requests from students and staff by phone and live chat, including password resets, MFA setup and troubleshooting, account lockouts, and campus badge access.',
+      'Triaged incoming requests in real time, resolving routine issues directly and escalating the rest with the diagnostic context needed for a coworker to continue without starting over.',
     ],
   },
   {

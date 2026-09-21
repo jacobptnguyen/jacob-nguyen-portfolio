@@ -23,6 +23,22 @@ Single-page scrolling site. **Section order mirrors the résumé (`resume/resume
 
 **`src/data.js` is the single source of truth for all site content** — contact info, education, experience, projects, and skills. Do not hardcode content into this file (CLAUDE.md); resumes, roles, and projects change over time and a content snapshot here will drift out of sync with the real data and go stale. When content needs updating, edit `src/data.js` directly and follow the writing guidelines below.
 
+## Two Surfaces, Two Bars
+
+**The portfolio is the superset. The resume is the curated cut.** They are intentionally
+different, and a difference between them is not drift to be reconciled.
+
+- **`src/data.js` (site)** holds everything worth showing. Scrolling is cheap and a card
+  costs almost nothing, so an entry only has to be real and accurate to earn a place.
+  Open PRs, smaller contributions, and roles that are not strictly SWE all belong here.
+- **`resume/resume.tex`** is one page and space is the binding constraint. Every line must
+  outrank the line it displaces. Cut anything that does not earn its height for a SWE
+  screen, even when it is true and even when it is on the site.
+
+So the normal outcome is **keep on site, cut from resume**, not remove from both. Before
+cutting something, ask which surface it fails on. Wording fixes and factual corrections
+still apply to both.
+
 ## Content Writing Guidelines
 
 Apply these to every bullet, description, and headline in `src/data.js` and `resume/resume.tex`.
