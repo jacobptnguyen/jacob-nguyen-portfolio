@@ -30,9 +30,9 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Shipped **3** merged PRs into Think Round's production **Next.js**/**TypeScript** site, building a Communities section with a list/grid toggle for the Paradise Project page and extending the **Sanity CMS** schema with a new subtitle field.",
-      'Eliminated stale exhibit content on the Paradise Project page by adding ISR revalidation (revalidate = 30), so **Sanity** publishes appear within 30 seconds instead of waiting on a full redeploy.',
-      'Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a **RAG** pipeline over USDA FoodData Central, with recipe generation on **Claude** and automatic failover to a local **Ollama** model.',
+      "Shipped **3** merged PRs into Think Round's production **Next.js**/**TypeScript** site, building a Communities section with a list/grid toggle for the Paradise Project page and extending the **Sanity CMS** schema with a new subtitle field",
+      'Eliminated stale exhibit content on the Paradise Project page by adding ISR revalidation (revalidate = 30), so **Sanity** publishes appear within 30 seconds instead of waiting on a full redeploy',
+      'Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a **RAG** pipeline over USDA FoodData Central, with recipe generation on **Claude** and automatic failover to a local **Ollama** model',
     ],
     links: [
       { label: '3 merged PRs on GitHub', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
@@ -45,8 +45,8 @@ export const experience = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Merged **4 PRs** into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across curriculum workshops and labs, so learner solutions using arrow functions or alternate styles pass without weakening test rigor.",
-      "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension.",
+      "Merged **4 PRs** into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across curriculum workshops and labs, so learner solutions using arrow functions or alternate styles pass without weakening test rigor",
+      "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension",
     ],
     links: [
       { label: '4 merged PRs on GitHub', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
@@ -58,8 +58,8 @@ export const experience = [
     employmentType: 'Internship',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Resolved **50+** IT support requests from students and staff by phone and live chat, including password resets, MFA setup and troubleshooting, account lockouts, and campus badge access.',
-      'Triaged incoming requests in real time, resolving routine issues directly and escalating the rest with the diagnostic context needed for a coworker to continue without starting over.',
+      'Resolved **50+** IT support requests from students and staff by phone and live chat, including password resets, MFA setup and troubleshooting, account lockouts, and campus badge access',
+      'Triaged incoming requests in real time, resolving routine issues directly and escalating the rest with the diagnostic context needed for a coworker to continue without starting over',
     ],
   },
   {
@@ -68,7 +68,7 @@ export const experience = [
     employmentType: 'Open Source',
     date: 'Jan 2026',
     bullets: [
-      'Added a static upload-requirements hint to OpenRFM, an open-source customer-segmentation tool, listing the three required CSV columns (CustomerID, TransactionDate, TransactionAmount) before file selection to head off failed uploads caused by mismatched headers.',
+      'Added a static upload-requirements hint to OpenRFM, an open-source customer-segmentation tool, listing the three required CSV columns (CustomerID, TransactionDate, TransactionAmount) before file selection to head off failed uploads caused by mismatched headers',
     ],
     links: [
       { label: 'Upload column hint PR', href: 'https://github.com/kamalu-chioma/OpenRFM/pull/13' },
@@ -96,8 +96,8 @@ export const projects = [
     name: 'AutoFit',
     stack: ['Next.js', 'TypeScript', 'Flask', 'Python', 'scikit-learn', 'Claude API'],
     bullets: [
-      'Built an end-to-end AutoML tool that turns a raw CSV upload into a fitted model, using **Claude** to pick the target variable, predictor columns, model type, and evaluation metrics so no ML expertise is required from the user.',
-      'Added a 1-5 data-quality score assessing completeness and authenticity rather than just predictions, manual override of any AI decision with instant client-side re-fitting, and production safeguards (4MB upload limit, 50K row cap, rate limiting, zero data persistence).',
+      'Built an end-to-end AutoML tool that turns a raw CSV upload into a fitted model, using **Claude** to pick the target variable, predictor columns, model type, and evaluation metrics so no ML expertise is required from the user',
+      'Added a 1-5 data-quality score assessing completeness and authenticity rather than just predictions, manual override of any AI decision with instant client-side re-fitting, and production safeguards (4MB upload limit, 50K row cap, rate limiting, zero data persistence)',
     ],
     github: 'https://github.com/jacobptnguyen/AutoFit',
     demo: 'https://auto-fit-pi.vercel.app',
@@ -107,8 +107,8 @@ export const projects = [
     name: 'Salon Menu',
     stack: ['React', 'Vite', 'Tailwind CSS', 'JavaScript', 'Framer Motion', 'react-zoom-pan-pinch', 'Vercel Web Analytics', 'Vercel'],
     bullets: [
-      "Reached **450+** unique visitors with a QR-code menu that replaced a salon's single shared swatch binder, where one customer browsing left everyone else waiting. Built the gallery as **30+** independently pinch-zoomable, pannable, and rotatable cards on one screen.",
-      'Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the app backend-free and accessible (semantic buttons, reduced-motion support).',
+      "Reached **450+** unique visitors with a QR-code menu that replaced a salon's single shared swatch binder, where one customer browsing left everyone else waiting. Built the gallery as **30+** independently pinch-zoomable, pannable, and rotatable cards on one screen",
+      'Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the app backend-free and accessible (semantic buttons, reduced-motion support)',
     ],
     github: 'https://github.com/jacobptnguyen/salon-menu',
     demo: 'https://salon-menu-jade.vercel.app/',
@@ -121,8 +121,8 @@ export const projects = [
     name: 'Salon Calendar',
     stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Supabase', 'PostgreSQL', 'Vercel'],
     bullets: [
-      "Captured **35+** real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via **Supabase** Realtime.",
-      "Engineered a time parser across **36** asserted cases, so staff type appointments exactly as they write them on paper ('230 Full set', '2;30', '2:30p', 24-hour). Stored plain date and time columns instead of timestamps, since UTC conversion silently shifts a booking to the wrong day.",
+      "Captured **35+** real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via **Supabase** Realtime",
+      "Engineered a time parser across **36** asserted cases, so staff type appointments exactly as they write them on paper ('230 Full set', '2;30', '2:30p', 24-hour). Stored plain date and time columns instead of timestamps, since UTC conversion silently shifts a booking to the wrong day",
     ],
     github: 'https://github.com/jacobptnguyen/salon_calendar',
     demo: 'https://saloncalendar.vercel.app/',
@@ -132,8 +132,8 @@ export const projects = [
     name: 'Rate My Stuff',
     stack: ['MERN', 'Express', 'MongoDB', 'Mongoose', 'TypeScript', 'Render'],
     bullets: [
-      'Engineered a **RESTful API** in **Node.js**/**Express** with full CRUD for ratings, comments, and images, backed by **MongoDB**/Mongoose.',
-      'Built a responsive **React**/**TypeScript** frontend with **React Router**, deployed to Render with **GitHub** CI/CD.',
+      'Engineered a **RESTful API** in **Node.js**/**Express** with full CRUD for ratings, comments, and images, backed by **MongoDB**/Mongoose',
+      'Built a responsive **React**/**TypeScript** frontend with **React Router**, deployed to Render with **GitHub** CI/CD',
     ],
     github: 'https://github.com/jacobptnguyen/rate-my-stuff',
     demo: 'https://rate-my-stuff.onrender.com/',
