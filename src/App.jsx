@@ -12,7 +12,11 @@ export default function App() {
   // and lazy images shift layout afterwards, so deep links like /#freecodecamp
   // never land on their own. Re-run the scroll once images have settled.
   useEffect(() => {
-    const id = decodeURIComponent(window.location.hash.slice(1))
+    // Prefer the path (/think-round) over the hash: LinkedIn and most unfurlers
+    // re-derive a pasted link from what they fetched, and a fragment is never
+    // sent to the server, so only a real path survives being shared.
+    const { pathname, hash } = window.location
+    const id = decodeURIComponent(pathname.slice(1) || hash.slice(1))
     if (!id) return
     const go = () => document.getElementById(id)?.scrollIntoView()
     if (document.readyState === 'complete') go()
