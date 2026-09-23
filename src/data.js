@@ -53,6 +53,18 @@ export const experience = [
     ],
   },
   {
+    role: 'Open Source Contributor',
+    org: 'Open Energy Dashboard',
+    employmentType: 'Open Source',
+    date: 'Sep 2026',
+    bullets: [
+      "Merged a fix into Open Energy Dashboard's Docker setup so a database setting is defined once instead of twice, by reusing the shared docker-compose variable block for the database build args (issue #1654)",
+    ],
+    links: [
+      { label: 'Docker config PR', href: 'https://github.com/OpenEnergyDashboard/OED/pull/1721' },
+    ],
+  },
+  {
     role: 'IT Intern',
     org: 'Hartnell College',
     employmentType: 'Internship',
@@ -102,6 +114,17 @@ export const projects = [
     github: 'https://github.com/jacobptnguyen/AutoFit',
     demo: 'https://auto-fit-pi.vercel.app',
     image: { src: '/images/autofit.png', alt: 'AutoFit data-quality score and gradient boosting model results, showing predicted vs. actual price and feature importance' },
+  },
+  {
+    name: 'Delay Classifier',
+    stack: ['Python', 'scikit-learn', 'pandas', 'NumPy', 'Streamlit', 'Jupyter'],
+    bullets: [
+      'Reached **0.72 ROC-AUC** and **67% accuracy** against a 55.5% always-on-time baseline, choosing a Random Forest over Logistic Regression and HistGradientBoosting on a held-out 20% of US flights (airline, airports, departure hour, length)',
+      'Deployed a live **Streamlit** app with a custom HTML and CSS departures-board design and a split-flap animation, where anyone can pick airline, route, day, and hour and read the odds of a delay at a glance',
+    ],
+    github: 'https://github.com/jacobptnguyen/delay-classifier',
+    demo: 'https://delay-classifier.streamlit.app/',
+    image: { src: '/images/delay-classifier.png', alt: 'Delay Classifier app showing a 43% chance of delay for a 9E flight from ATL to LAX, labeled likely on time' },
   },
   {
     name: 'Salon Menu',
@@ -160,11 +183,11 @@ export const skills = [
   },
   {
     category: 'AI/ML & APIs',
-    items: ['Claude API', 'RAG', 'Ollama', 'scikit-learn'],
+    items: ['Claude API', 'RAG', 'Ollama', 'scikit-learn', 'pandas', 'NumPy'],
   },
   {
     category: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Vercel', 'Sanity CMS'],
+    items: ['Git', 'GitHub', 'Vercel', 'Sanity CMS', 'Docker'],
   },
 ]
 
