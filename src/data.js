@@ -21,6 +21,16 @@ export const education = {
   degree: 'B.S. Computer Science, Minor in Statistics',
   gpa: '3.59',
   date: 'Graduated Jun 2026',
+  coursework: [
+    'Machine Learning',
+    'Artificial Intelligence',
+    'Statistical Data Science',
+    'Database Systems',
+    'Data Structures',
+    'Algorithm Design & Analysis',
+    'Object-Oriented Programming',
+    'Operating Systems',
+  ],
 }
 
 export const experience = [
