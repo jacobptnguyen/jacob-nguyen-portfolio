@@ -1,19 +1,28 @@
+import { motion, useReducedMotion } from 'framer-motion'
 import Rich from './Rich'
+import { inView, itemVariants, listVariants } from '../motion'
 
 export default function Bullets({ items }) {
+  const reduce = useReducedMotion()
+  const item = itemVariants(reduce, { x: -10 })
   return (
-    <ul className="space-y-2.5">
-      {items.map((item) => (
-        <li key={item} className="flex gap-3 text-copy text-body">
-          <span
-            aria-hidden="true"
-            className="lime-mark mt-[0.5em] h-[0.4rem] w-[0.4rem] shrink-0 rounded-[2px]"
-          />
-          <span className="min-w-0">
-            <Rich text={item} />
+    <motion.ul
+      className="space-y-2.5"
+      variants={listVariants(0.07)}
+      initial="hidden"
+      whileInView="show"
+      viewport={inView}
+    >
+      {items.map((text) => (
+        <motion.li key={text} variants={item} className="flex gap-3 text-copy text-body">
+          <span aria-hidden="true" className="font-mono font-bold leading-[1.65] text-accent">
+            &rsaquo;
           </span>
-        </li>
+          <span className="min-w-0">
+            <Rich text={text} />
+          </span>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   )
 }

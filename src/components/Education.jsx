@@ -11,10 +11,10 @@ export default function Education() {
         <Card>
           <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
             <h3 className="text-entry text-ink">{education.school}</h3>
-            <span className="text-date tabular-nums text-muted">{education.date}</span>
+            <span className="font-mono text-date tabular-nums text-muted">{education.date}</span>
           </div>
           <p className="mt-1 text-org text-body">
-            {education.degree} · GPA {education.gpa}
+            {education.degree} &middot; GPA {education.gpa}
           </p>
         </Card>
       </Reveal>

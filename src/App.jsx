@@ -6,6 +6,8 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
+import ScrollProgress from './components/ScrollProgress'
+import { experience, openSource } from './data'
 
 export default function App() {
   // The browser tries its fragment scroll before React has rendered the target,
@@ -24,18 +26,20 @@ export default function App() {
   }, [])
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen lg:pl-64">
       <a
         href="#main"
-        className="sr-only rounded-full bg-ink px-5 py-3 text-date font-semibold text-bg focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60]"
+        className="sr-only rounded-lg bg-ink px-5 py-3 font-mono text-date font-semibold text-bg focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60]"
       >
         Skip to content
       </a>
+      <ScrollProgress />
       <Header />
       <main id="main">
         <Hero />
         <Education />
-        <Experience />
+        <Experience entries={experience} />
+        <Experience entries={openSource} id="open-source" title="Open Source" orgFirst />
         <Projects />
         <Skills />
       </main>

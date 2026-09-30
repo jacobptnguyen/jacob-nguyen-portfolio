@@ -3,27 +3,28 @@ import SectionHeading from './SectionHeading'
 import Card from './Card'
 import Bullets from './Bullets'
 import { ExternalLink } from './Links'
-import { experience } from '../data'
 import { slug } from '../slug'
 
-export default function Experience() {
+// orgFirst leads with the organisation: for open source the role is identical
+// on every card, so the org is the useful heading.
+export default function Experience({ entries, id = 'experience', title = 'Experience', orgFirst = false }) {
   return (
-    <section id="experience" aria-labelledby="experience-heading" className="mx-auto max-w-shell px-6 py-12">
+    <section id={id} aria-labelledby={`${id}-heading`} className="mx-auto max-w-shell px-6 py-12">
       <Reveal>
-        <SectionHeading id="experience-heading" title="Experience" />
+        <SectionHeading id={`${id}-heading`} title={title} />
       </Reveal>
       <ul className="space-y-4">
-        {experience.map((job) => (
+        {entries.map((job) => (
           <li key={`${job.role}-${job.org}`} id={slug(job.org)}>
             <Reveal>
               <Card>
                 <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
-                  <h3 className="text-entry text-ink">{job.role}</h3>
-                  <span className="text-date tabular-nums text-muted">{job.date}</span>
+                  <h3 className="text-entry text-ink">{orgFirst ? job.org : job.role}</h3>
+                  <span className="font-mono text-date tabular-nums text-muted">{job.date}</span>
                 </div>
                 <p className="mt-1 text-org font-medium text-body">
-                  {job.org}
-                  {job.employmentType && <span className="text-muted"> · {job.employmentType}</span>}
+                  {orgFirst ? job.role : job.org}
+                  {!orgFirst && job.employmentType && <span className="text-muted"> &middot; {job.employmentType}</span>}
                 </p>
 
                 <div className="mt-4 flex flex-col gap-6 sm:flex-row">
@@ -58,9 +59,7 @@ export default function Experience() {
                           className="max-h-64 w-full object-contain sm:max-h-none"
                         />
                       </a>
-                      <figcaption className="mt-2 text-micro text-muted">
-                        {job.poster.caption}
-                      </figcaption>
+                      <figcaption className="mt-2 text-micro text-muted">{job.poster.caption}</figcaption>
                     </figure>
                   )}
                 </div>

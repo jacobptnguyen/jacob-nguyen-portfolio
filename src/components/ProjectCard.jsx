@@ -9,13 +9,13 @@ function Shot({ image, label, capped }) {
       target="_blank"
       rel="noreferrer"
       aria-label={label}
-      className="block overflow-hidden rounded-lg border border-hair transition-opacity hover:opacity-90"
+      className="group block overflow-hidden rounded-lg border border-hair"
     >
       <img
         src={image.src}
         alt={image.alt}
         loading="lazy"
-        className={`max-h-64 w-full object-contain ${capped ? '' : 'sm:max-h-none'}`}
+        className={`max-h-64 w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] ${capped ? '' : 'sm:max-h-none'}`}
       />
     </a>
   )
@@ -28,7 +28,7 @@ export default function ProjectCard({ project }) {
     <Card>
       <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
         <h3 className="text-entry text-ink">{project.name}</h3>
-        {project.date && <span className="text-date tabular-nums text-muted">{project.date}</span>}
+        <span className="font-mono text-date text-muted">{project.date ?? project.category}</span>
       </div>
 
       <div className="mt-4 flex flex-col gap-6 sm:flex-row">
@@ -37,10 +37,7 @@ export default function ProjectCard({ project }) {
 
           <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={`${project.name} tech stack`}>
             {project.stack.map((tech) => (
-              <li
-                key={tech}
-                className="rounded-full bg-chip px-2.5 py-1 text-micro text-body"
-              >
+              <li key={tech} className="rounded-md bg-chip px-2.5 py-1 font-mono text-micro text-body">
                 {tech}
               </li>
             ))}
