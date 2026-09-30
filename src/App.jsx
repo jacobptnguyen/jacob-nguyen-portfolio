@@ -11,8 +11,9 @@ import { experience, openSource } from './data'
 
 export default function App() {
   // The browser tries its fragment scroll before React has rendered the target,
-  // and lazy images shift layout afterwards, so deep links like /#freecodecamp
-  // never land on their own. Re-run the scroll once images have settled.
+  // and lazy images keep growing the page afterwards, so deep links like
+  // /#freecodecamp never land on their own. Jump instantly, then re-jump whenever
+  // the page height changes, until the reader scrolls or 3 seconds pass.
   useEffect(() => {
     // Prefer the path (/think-round) over the hash: LinkedIn and most unfurlers
     // re-derive a pasted link from what they fetched, and a fragment is never
@@ -20,9 +21,19 @@ export default function App() {
     const { pathname, hash } = window.location
     const id = decodeURIComponent(pathname.slice(1) || hash.slice(1))
     if (!id) return
-    const go = () => document.getElementById(id)?.scrollIntoView()
-    if (document.readyState === 'complete') go()
-    else window.addEventListener('load', go, { once: true })
+    const go = () => document.getElementById(id)?.scrollIntoView({ behavior: 'instant' })
+    go()
+    const ro = new ResizeObserver(go)
+    ro.observe(document.body)
+    const stop = () => ro.disconnect()
+    const timer = setTimeout(stop, 3000)
+    const inputs = ['wheel', 'touchstart', 'keydown', 'pointerdown']
+    inputs.forEach((e) => window.addEventListener(e, stop, { once: true, passive: true }))
+    return () => {
+      clearTimeout(timer)
+      stop()
+      inputs.forEach((e) => window.removeEventListener(e, stop))
+    }
   }, [])
 
   return (
