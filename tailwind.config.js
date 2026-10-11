@@ -1,7 +1,10 @@
+// A bare var() can't take Tailwind's /opacity modifier (bg-accent/50 would
+// emit nothing), so mix the token with transparent at the requested alpha.
+const token = (name) => `color-mix(in srgb, var(--${name}) calc(<alpha-value> * 100%), transparent)`
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,jsx}'],
-  darkMode: 'media',
   // Hover styles apply only on devices that can hover, so taps never stick.
   future: { hoverOnlyWhenSupported: true },
   theme: {
@@ -13,16 +16,15 @@ export default {
         sans: ['"Schibsted Grotesk"', 'ui-sans-serif', 'system-ui', '-apple-system', '"Segoe UI"', 'sans-serif'],
       },
       colors: {
-        bg: 'var(--bg)',
-        surface: 'var(--surface)',
-        ink: 'var(--ink)',
-        body: 'var(--body)',
-        muted: 'var(--muted)',
-        hair: 'var(--border)',
-        chip: 'var(--chip)',
-        accent: 'var(--accent)',
-        'on-accent': 'var(--on-accent)',
-        amber: 'var(--amber)',
+        bg: token('bg'),
+        surface: token('surface'),
+        ink: token('ink'),
+        body: token('body'),
+        muted: token('muted'),
+        hair: token('border'),
+        chip: token('chip'),
+        accent: token('accent'),
+        'on-accent': token('on-accent'),
       },
       // WARNING: these keys must never collide with a key in `colors` above.
       // Tailwind emits `text-<key>` for both maps, and the color wins silently

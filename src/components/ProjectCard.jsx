@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
 
           <ul className="mt-5 flex flex-wrap gap-1.5" aria-label={`${project.name} tech stack`}>
             {project.stack.map((tech) => (
-              <li key={tech} className="rounded-md bg-chip px-2.5 py-1 font-mono text-micro text-body">
+              <li key={tech} className="rounded-md bg-chip px-2.5 py-1 font-mono text-micro text-body transition-colors hover:bg-accent hover:text-on-accent">
                 {tech}
               </li>
             ))}

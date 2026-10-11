@@ -83,23 +83,25 @@ export const openSource = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Merged **4 PRs** into freeCodeCamp, replacing regex/string-matching test assertions with behavior-based assertions across curriculum workshops and labs, so learner solutions using arrow functions or alternate styles pass without weakening test rigor",
+      "Fixed **4** freeCodeCamp curriculum workshops and labs (**JavaScript** and **TypeScript**) that rejected valid learner solutions, replacing brittle regex/string-matching test assertions with behavior- and AST-based checks so arrow functions and alternate styles pass without weakening test rigor",
+      "Corrected inaccurate DAG, disconnected-graph, binary-search-tree, and priority-queue definitions in freeCodeCamp's Graphs and Trees review, and added missing coverage of BFS/DFS mechanics, adjacency list vs. matrix complexity, shortest paths, tries, and array-backed heaps",
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension",
     ],
     links: [
-      { label: '4 merged PRs on GitHub', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
+      { label: '6 merged PRs on GitHub', href: 'https://github.com/freeCodeCamp/freeCodeCamp/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
     ],
   },
   {
     role: 'Open Source Contributor',
     org: 'Open Energy Dashboard',
     employmentType: 'Open Source',
-    date: 'Sep 2026',
+    date: 'Sep – Oct 2026',
     bullets: [
-      "Merged a fix into Open Energy Dashboard's Docker setup so a database setting is defined once instead of twice, by reusing the shared docker-compose variable block for the database build args (issue #1654)",
+      "Merged a fix into Open Energy Dashboard's Docker setup so a database setting is defined once instead of twice, by reusing the shared docker-compose variable block for the database build args",
+      "Eliminated a recurring webpack build warning by excluding a Plotly mapbox dependency that references a source map it doesn't ship from source-map-loader",
     ],
     links: [
-      { label: 'Docker config PR', href: 'https://github.com/OpenEnergyDashboard/OED/pull/1721' },
+      { label: '2 merged PRs on GitHub', href: 'https://github.com/OpenEnergyDashboard/OED/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
     ],
   },
   {
@@ -161,7 +163,7 @@ export const projects = [
     category: 'Web Apps',
     stack: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Supabase', 'PostgreSQL', 'Vercel'],
     bullets: [
-      "Captured **75+** real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via **Supabase** Realtime",
+      "Captured **125+** real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via **Supabase** Realtime",
       "Engineered a time parser across **36** asserted cases, so staff type appointments exactly as they write them on paper ('230 Full set', '2;30', '2:30p', 24-hour). Stored plain date and time columns instead of timestamps, since UTC conversion silently shifts a booking to the wrong day",
     ],
     github: 'https://github.com/jacobptnguyen/salon_calendar',

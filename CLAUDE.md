@@ -8,13 +8,14 @@ Single-page personal portfolio site for Jacob Nguyen, a CS grad (UC Davis, June 
 - Tailwind CSS
 - Framer Motion for light transitions (fade/slide-in on scroll, eased page-load entrance for the hero)
 - Deploy target: Vercel, GitHub-integrated for CI/CD on push to `main`
+- `npm run check` builds the site and tests it in headless Chromium (phone + desktop, dark + light). It fails on console errors, broken links/images/anchors, horizontal scroll, unnamed controls, duplicate ids, and text below the contrast floor, and saves viewport screenshots to `.check/`. Run it after any UI or content change.
 
 ## Structure
 Single-page scrolling site. **The shared sections (Education, Experience, Projects, Skills) keep the résumé's relative order (`resume/resume.tex`); sections that exist only on the site (Open Source) are placed by impact.** Current order:
 1. Header — left rail on desktop (file-tree nav, contact links), sticky top bar on phones; includes photo, name, and contact links (email, GitHub, LinkedIn)
 2. Hero — name, headline, pitch, resume download + primary CTAs, and contact link row
 3. Education
-4. Experience — reverse-chronological, most SWE-relevant roles first (paid roles only)
+4. Experience — reverse-chronological, most SWE-relevant roles first
 5. Open Source — one card per organisation, merged work only; lives in the `openSource` array in `src/data.js`
 6. Projects — one full-width card per project, browsed through category tabs (`projectCategories`, each project has a `category`; "All" is the default so nothing is hidden)
 7. Skills — grouped by category as they appear in `src/data.js`
@@ -44,6 +45,7 @@ still apply to both.
 
 Apply these to every bullet, description, and headline in `src/data.js` and `resume/resume.tex`.
 
+- **No issue or PR numbers in copy.** The card's link already points to the work.
 - **Lead with an action verb.** Built, Resolved, Merged, Shipped, Replaced, Eliminated. Never "Responsible for" or "Worked on."
 - **Follow an XYZ shape:** accomplished [X], measured by [Y], by doing [Z]. Outcome first, evidence second, method last.
 - **A metric must measure impact, not volume.** Adoption, time saved, scale handled, problems eliminated are worth front-loading. Lines of code, file counts, commit counts, PR counts and hours spent are not: they measure how much work happened, not whether it mattered.

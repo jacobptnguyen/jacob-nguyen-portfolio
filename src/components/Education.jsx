@@ -38,7 +38,7 @@ export default function Education() {
                   <motion.li
                     key={course}
                     variants={chip}
-                    className="rounded-md bg-chip px-2.5 py-1 font-mono text-micro text-body"
+                    className="rounded-md bg-chip px-2.5 py-1 font-mono text-micro text-body transition-colors hover:bg-accent hover:text-on-accent"
                   >
                     {course}
                   </motion.li>
