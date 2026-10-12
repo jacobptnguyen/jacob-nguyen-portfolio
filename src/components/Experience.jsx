@@ -51,15 +51,15 @@ export default function Experience({ entries, id = 'experience', title = 'Experi
                         target="_blank"
                         rel="noreferrer"
                         aria-label={`${job.poster.caption}, open full size`}
-                        className="block overflow-hidden rounded-lg border border-hair transition-opacity hover:opacity-90"
+                        className="group block overflow-hidden rounded-lg border border-hair"
                       >
                         <img
                           src={job.poster.src}
                           alt={job.poster.alt}
                           loading="lazy"
-                          width="1487"
-                          height="1127"
-                          className="max-h-64 w-full object-contain sm:max-h-none"
+                          width={job.poster.width}
+                          height={job.poster.height}
+                          className="max-h-64 w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:max-h-none"
                         />
                       </a>
                       <figcaption className="mt-2 text-micro text-muted">{job.poster.caption}</figcaption>
