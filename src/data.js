@@ -60,6 +60,16 @@ export const experience = [
     ],
   },
   {
+    role: 'Machine Learning Researcher',
+    org: 'PRISM ML Lab, UC Davis',
+    employmentType: 'Part-time',
+    date: 'Oct – Dec 2025',
+    bullets: [
+      "Designed **4** LLM evaluation tasks that **Gemini 2.5** failed, each with a **Python** verification script, a computed ground truth, and an analysis of the error, catching invented data rows, malformed fields, and correct code paired with wrong reported output",
+      "Wrote **7** test questions to evaluate a **RAG** marketing agent on **Mistral-7B** and **Gemini 2.0 Flash**, covering competitor analysis, market trends, and target audiences across three startup scenarios",
+    ],
+  },
+  {
     role: 'Software Engineer Intern',
     org: 'Monterey Peninsula College',
     employmentType: 'Internship',
@@ -83,7 +93,7 @@ export const openSource = [
     employmentType: 'Open Source',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Fixed **4** freeCodeCamp curriculum workshops and labs (**JavaScript** and **TypeScript**) that rejected valid learner solutions, replacing brittle regex/string-matching test assertions with behavior- and AST-based checks so arrow functions and alternate styles pass without weakening test rigor",
+      "Fixed **4** freeCodeCamp curriculum workshops and labs (**JavaScript** and **TypeScript**) by replacing brittle regex/string-matching test assertions with behavior- and AST-based checks, so arrow functions and alternate styles pass without weakening test rigor",
       "Corrected inaccurate DAG, disconnected-graph, binary-search-tree, and priority-queue definitions in freeCodeCamp's Graphs and Trees review, and added missing coverage of BFS/DFS mechanics, adjacency list vs. matrix complexity, shortest paths, tries, and array-backed heaps",
       "Rewrote ambiguous VS Code extension descriptions in freeCodeCamp's curriculum and corrected a misleading quiz question about the Error Lens extension",
     ],
