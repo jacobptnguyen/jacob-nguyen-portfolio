@@ -5,6 +5,7 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
+import Certifications from './components/Certifications'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import { experience, openSource } from './data'
@@ -53,6 +54,7 @@ export default function App() {
         <Experience entries={openSource} id="open-source" title="Open Source" orgFirst />
         <Projects />
         <Skills />
+        <Certifications />
       </main>
       <Footer />
     </div>

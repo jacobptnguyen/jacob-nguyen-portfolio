@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { contact } from '../data'
 
@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Open Source', href: '#open-source' },
   { label: 'Projects', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Certifications', href: '#certifications' },
 ]
 
 const chromeLink =
@@ -15,20 +16,37 @@ const chromeLink =
 
 function useActiveSection() {
   const [active, setActive] = useState('')
+  // A nav click wins over scroll tracking while its scroll settles: near the
+  // bottom, Skills and Certifications end at the same position, so position
+  // alone can't tell which one was picked.
+  const lockedUntil = useRef(0)
+  const pick = (id) => {
+    lockedUntil.current = Date.now() + 1000
+    setActive(id)
+  }
   useEffect(() => {
+    const track = (id) => Date.now() > lockedUntil.current && setActive(id)
     const els = navLinks.map((l) => document.getElementById(l.href.slice(1))).filter(Boolean)
+    // The last section is too short to ever reach the observed band, so it wins
+    // whenever the page can't scroll any further.
+    const atBottom = () => window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => e.isIntersecting && setActive(e.target.id)),
+      (entries) => entries.forEach((e) => e.isIntersecting && track(atBottom() ? els.at(-1).id : e.target.id)),
       { rootMargin: '-20% 0px -65% 0px' },
     )
     els.forEach((el) => io.observe(el))
-    return () => io.disconnect()
+    const onScroll = () => atBottom() && track(els.at(-1).id)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      io.disconnect()
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
-  return active
+  return [active, pick]
 }
 
 export default function Header() {
-  const active = useActiveSection()
+  const [active, pick] = useActiveSection()
   const reduce = useReducedMotion()
 
   return (
@@ -64,6 +82,7 @@ export default function Header() {
                     <a
                       href={link.href}
                       aria-current={current ? 'true' : undefined}
+                      onClick={() => pick(link.href.slice(1))}
                       className={`${chromeLink} lg:w-full lg:border-l-2 lg:border-hair lg:pl-3 ${
                         current ? 'text-ink' : ''
                       }`}

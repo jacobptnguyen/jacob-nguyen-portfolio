@@ -19,7 +19,8 @@ Single-page scrolling site. **The shared sections (Education, Experience, Projec
 5. Open Source — one card per organisation, merged work only; lives in the `openSource` array in `src/data.js`
 6. Projects — one full-width card per project, browsed through category tabs (`projectCategories`, each project has a `category`; "All" is the default so nothing is hidden)
 7. Skills — grouped by category as they appear in `src/data.js`
-8. Footer — contact links repeated (email, GitHub, LinkedIn, resume)
+8. Certifications — `certifications` array in `src/data.js`; each name links to its verification badge; site-only, not on the résumé
+9. Footer — contact links repeated (email, GitHub, LinkedIn, resume)
 
 ## Content Source
 

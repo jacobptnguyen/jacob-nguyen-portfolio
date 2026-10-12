@@ -33,6 +33,12 @@ export const education = {
   ],
 }
 
+export const certifications = [
+  { name: 'CompTIA Security+', issued: 'Jul 2026', expires: 'Jul 2029', href: 'https://www.credly.com/badges/738ad813-8fcb-4c3f-9ed6-e99327f2cf99/public_url' },
+  { name: 'CompTIA Network+', issued: 'May 2026', expires: 'Jul 2029', href: 'https://www.credly.com/badges/c4b33121-b4b0-4238-af2e-7905396f3398/public_url' },
+  { name: 'CompTIA A+', issued: 'Mar 2026', expires: 'Jul 2029', href: 'https://www.credly.com/badges/ac53f6b2-afeb-4ef8-9d0a-ec26b20d6231/public_url' },
+]
+
 export const experience = [
   {
     role: 'Gen AI + Full Stack Intern',
