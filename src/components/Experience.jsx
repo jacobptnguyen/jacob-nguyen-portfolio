@@ -22,10 +22,13 @@ export default function Experience({ entries, id = 'experience', title = 'Experi
                   <h3 className="text-entry text-ink">{orgFirst ? job.org : job.role}</h3>
                   <span className="font-mono text-date tabular-nums text-muted">{job.date}</span>
                 </div>
-                <p className="mt-1 text-org font-medium text-body">
-                  {orgFirst ? job.role : job.org}
-                  {!orgFirst && job.employmentType && <span className="text-muted"> &middot; {job.employmentType}</span>}
-                </p>
+                <div className="mt-1 flex flex-wrap items-baseline justify-between gap-x-6">
+                  <p className="text-org font-medium text-body">
+                    {orgFirst ? job.role : job.org}
+                    {!orgFirst && job.employmentType && <span className="text-muted"> &middot; {job.employmentType}</span>}
+                  </p>
+                  {job.location && <span className="font-mono text-date text-muted">{job.location}</span>}
+                </div>
 
                 <div className="mt-4 flex flex-col gap-6 sm:flex-row">
                   <div className="min-w-0 sm:flex-1">

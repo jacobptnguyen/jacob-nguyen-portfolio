@@ -38,6 +38,7 @@ export const experience = [
     role: 'Gen AI + Full Stack Intern',
     org: 'Think Round',
     employmentType: 'Internship',
+    location: 'San Francisco, CA (Remote)',
     date: 'Aug 2026 – Present',
     bullets: [
       "Shipped **3** merged PRs into Think Round's production **Next.js**/**TypeScript** site, building a Communities section with a list/grid toggle for the Paradise Project page and extending the **Sanity CMS** schema with a new subtitle field",
@@ -53,6 +54,7 @@ export const experience = [
     role: 'IT Intern',
     org: 'Hartnell College',
     employmentType: 'Internship',
+    location: 'Salinas, CA',
     date: 'Aug 2026 – Present',
     bullets: [
       'Resolved **50+** IT support requests from students and staff by phone and live chat, including password resets, MFA setup and troubleshooting, account lockouts, and campus badge access',
@@ -63,6 +65,7 @@ export const experience = [
     role: 'Machine Learning Researcher',
     org: 'PRISM ML Lab, UC Davis',
     employmentType: 'Part-time',
+    location: 'Davis, CA (Remote)',
     date: 'Oct – Dec 2025',
     bullets: [
       "Designed **4** LLM evaluation tasks that **Gemini 2.5** failed, each with a **Python** verification script, a computed ground truth, and an analysis of the error, catching invented data rows, malformed fields, and correct code paired with wrong reported output",
@@ -73,6 +76,7 @@ export const experience = [
     role: 'Software Engineer Intern',
     org: 'Monterey Peninsula College',
     employmentType: 'Internship',
+    location: 'Monterey, CA',
     date: 'Jun – Jul 2024',
     bullets: [
       'Built a data visualization tool in Component Pascal (BlackBox Framework) parsing arbitrary CSVs into a linked-list structure, dynamically rendering histograms',
@@ -91,6 +95,7 @@ export const openSource = [
     role: 'Open Source Contributor',
     org: 'freeCodeCamp',
     employmentType: 'Open Source',
+    location: 'Remote',
     date: 'Aug 2026 – Present',
     bullets: [
       "Fixed **4** freeCodeCamp curriculum workshops and labs (**JavaScript** and **TypeScript**) by replacing brittle regex/string-matching test assertions with behavior- and AST-based checks, so arrow functions and alternate styles pass without weakening test rigor",
@@ -105,6 +110,7 @@ export const openSource = [
     role: 'Open Source Contributor',
     org: 'Open Energy Dashboard',
     employmentType: 'Open Source',
+    location: 'Remote',
     date: 'Sep – Oct 2026',
     bullets: [
       "Merged a fix into Open Energy Dashboard's Docker setup so a database setting is defined once instead of twice, by reusing the shared docker-compose variable block for the database build args",
@@ -118,6 +124,7 @@ export const openSource = [
     role: 'Open Source Contributor',
     org: 'OpenRFM',
     employmentType: 'Open Source',
+    location: 'Remote',
     date: 'Jan 2026',
     bullets: [
       'Added a static upload-requirements hint to OpenRFM, an open-source customer-segmentation tool, listing the three required CSV columns (CustomerID, TransactionDate, TransactionAmount) before file selection to head off failed uploads caused by mismatched headers',
