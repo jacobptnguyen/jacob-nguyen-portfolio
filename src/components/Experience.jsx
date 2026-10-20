@@ -30,42 +30,44 @@ export default function Experience({ entries, id = 'experience', title = 'Experi
                   {job.location && <span className="font-mono text-date text-muted">{job.location}</span>}
                 </div>
 
-                <div className="mt-4 flex flex-col gap-6 sm:flex-row">
-                  <div className="min-w-0 sm:flex-1">
-                    <Bullets items={job.bullets} />
-                    {job.links && (
-                      <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-date">
-                        {job.links.map((link) => (
-                          <ExternalLink key={link.href} href={link.href}>
-                            {link.label}
-                          </ExternalLink>
-                        ))}
-                      </div>
+                {job.bullets && (
+                  <div className="mt-4 flex flex-col gap-6 sm:flex-row">
+                    <div className="min-w-0 sm:flex-1">
+                      <Bullets items={job.bullets} />
+                      {job.links && (
+                        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 text-date">
+                          {job.links.map((link) => (
+                            <ExternalLink key={link.href} href={link.href}>
+                              {link.label}
+                            </ExternalLink>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+
+                    {job.poster && (
+                      <figure className="shrink-0 sm:w-52">
+                        <a
+                          href={job.poster.src}
+                          target="_blank"
+                          rel="noreferrer"
+                          aria-label={`${job.poster.caption}, open full size`}
+                          className="group block overflow-hidden rounded-lg border border-hair"
+                        >
+                          <img
+                            src={job.poster.src}
+                            alt={job.poster.alt}
+                            loading="lazy"
+                            width={job.poster.width}
+                            height={job.poster.height}
+                            className="max-h-64 w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:max-h-none"
+                          />
+                        </a>
+                        <figcaption className="mt-2 text-micro text-muted">{job.poster.caption}</figcaption>
+                      </figure>
                     )}
                   </div>
-
-                  {job.poster && (
-                    <figure className="shrink-0 sm:w-52">
-                      <a
-                        href={job.poster.src}
-                        target="_blank"
-                        rel="noreferrer"
-                        aria-label={`${job.poster.caption}, open full size`}
-                        className="group block overflow-hidden rounded-lg border border-hair"
-                      >
-                        <img
-                          src={job.poster.src}
-                          alt={job.poster.alt}
-                          loading="lazy"
-                          width={job.poster.width}
-                          height={job.poster.height}
-                          className="max-h-64 w-full object-contain transition-transform duration-300 ease-out group-hover:scale-[1.03] sm:max-h-none"
-                        />
-                      </a>
-                      <figcaption className="mt-2 text-micro text-muted">{job.poster.caption}</figcaption>
-                    </figure>
-                  )}
-                </div>
+                )}
               </Card>
             </Reveal>
           </li>

@@ -7,7 +7,7 @@ export const contact = {
 export const hero = {
   name: 'Jacob Nguyen',
   headline:
-    "Gen AI + Full Stack Intern @ Think Round | IT Intern @ Hartnell College | Open Source Contributor | UC Davis CS '26",
+    "Software Engineer Intern @ Aprentech | Full Stack Engineer Intern @ VettyFilms | Gen AI + Full Stack Intern @ Think Round | UC Davis CS '26",
   pitch:
     "I build things that take a step out of someone's day. **AutoFit** turns a raw CSV into a "
     + "fitted model with no ML expertise, and two apps replaced a local salon's paper appointment "
@@ -40,6 +40,20 @@ export const certifications = [
 ]
 
 export const experience = [
+  {
+    role: 'Software Engineer Intern',
+    org: 'Aprentech',
+    employmentType: 'Internship',
+    location: 'Greenfield, CA (Remote)',
+    date: 'Oct 2026 – Present',
+  },
+  {
+    role: 'Full Stack Engineer Intern',
+    org: 'VettyFilms',
+    employmentType: 'Internship',
+    location: 'Monterey, CA (Remote)',
+    date: 'Oct 2026 – Present',
+  },
   {
     role: 'Gen AI + Full Stack Intern',
     org: 'Think Round',
@@ -111,7 +125,7 @@ export const openSource = [
     org: 'freeCodeCamp',
     employmentType: 'Open Source',
     location: 'Remote',
-    date: 'Aug 2026 – Present',
+    date: 'Aug 2026 – Oct 2026',
     bullets: [
       "Fixed **4** freeCodeCamp curriculum workshops and labs (**JavaScript** and **TypeScript**) by replacing brittle regex/string-matching test assertions with behavior- and AST-based checks, so arrow functions and alternate styles pass without weakening test rigor",
       "Corrected inaccurate DAG, disconnected-graph, binary-search-tree, and priority-queue definitions in freeCodeCamp's Graphs and Trees review, and added missing coverage of BFS/DFS mechanics, adjacency list vs. matrix complexity, shortest paths, tries, and array-backed heaps",
@@ -200,7 +214,7 @@ export const projects = [
     ],
     github: 'https://github.com/jacobptnguyen/pseudofy',
     demo: 'https://pseudofy-gn4q.vercel.app',
-    image: { src: '/images/pseudofy.png', alt: 'pseudofy grading a repo: a file tree rebuilt from memory on the left, a short explanation in the editor, and a score of 17 out of 100 with structure, purpose, and relationships sub-scores on the right' },
+    image: { src: '/images/pseudofy.png', alt: 'pseudofy grading the salon-menu repo: a file tree rebuilt from memory on the left, an explanation of Gallery.jsx in the editor, and a score of 95 out of 100 with structure, purpose, and relationships sub-scores and written feedback on the right' },
   },
   {
     name: 'Rate My Stuff',
