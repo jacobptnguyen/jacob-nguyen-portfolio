@@ -7,7 +7,7 @@ export const contact = {
 export const hero = {
   name: 'Jacob Nguyen',
   headline:
-    "Software Engineer Intern @ Aprentech | Full Stack Engineer Intern @ VettyFilms | Gen AI + Full Stack Intern @ Think Round | UC Davis CS '26",
+    "SWE Intern @ Aprentech | Full Stack Engineer Intern @ VettyFilms | Gen AI + Full Stack Intern @ Think Round | UC Davis CS '26",
   pitch:
     "I build things that take a step out of someone's day. **AutoFit** turns a raw CSV into a "
     + "fitted model with no ML expertise, and two apps replaced a local salon's paper appointment "
