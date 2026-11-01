@@ -61,21 +61,13 @@ export const experience = [
     location: 'San Francisco, CA (Remote)',
     date: 'Aug 2026 – Present',
     bullets: [
-      'Cut **Sanity** publish-to-live time from a full redeploy to **30 seconds** by adding ISR revalidation (revalidate = 30) to the Paradise Project page, eliminating stale exhibit content',
-      "Shipped **3** merged PRs into Think Round's production **Next.js**/**TypeScript** site, building a Communities section with a list/grid toggle for the Paradise Project page and extending the **Sanity CMS** schema with a new subtitle field",
-      'Built macro-chatbot, which builds a recipe ingredient-by-ingredient and returns exact macros via a **RAG** pipeline over USDA FoodData Central, with recipe generation on **Claude** and automatic failover to a local **Ollama** model',
+      "Co-led a **4**-person code quality initiative on the production site, triaging a teammate's **25**-finding code review into 4 owned sub-issues grouped by shared files to avoid merge conflicts",
+      "Nearly tripled the AI agent platform's guardrail tests from **14** to **40** by adding **Pydantic** schema validation that swaps malformed LLM responses for a safe fallback, a **19**-case regression set, and a first LLM-judge baseline for two chatbots",
+      "Shipped **5** merged PRs into Think Round's production **Next.js**/**TypeScript** site, cutting **Sanity** publish-to-live time from a full redeploy to **30 seconds** with ISR revalidation and rebuilding the Paradise Project page to match its Figma design",
     ],
     links: [
-      { label: '3 merged PRs on GitHub', href: 'https://github.com/Think-Round-Inc/ThinkRound-New-Website/pulls?q=is%3Apr+author%3Ajacobptnguyen+is%3Amerged' },
-      { label: 'macro-chatbot on GitHub', href: 'https://github.com/jacobptnguyen/macro-chatbot' },
+      { label: '6 merged PRs on GitHub', href: 'https://github.com/search?q=org%3AThink-Round-Inc+author%3Ajacobptnguyen+is%3Apr+is%3Amerged&type=pullrequests' },
     ],
-    poster: {
-      src: '/images/macro-chatbot.png',
-      alt: 'macro-chatbot showing a finished chicken and rice recipe followed by a macro summary of 525 kcal, 66 g protein, 42 g carbs, and 7.7 g fat',
-      caption: 'macro-chatbot',
-      width: 1280,
-      height: 900,
-    },
   },
   {
     role: 'IT Intern',
@@ -251,6 +243,17 @@ export const projects = [
     github: 'https://github.com/jacobptnguyen/sounding',
     demo: 'https://sounding-two.vercel.app',
     image: { src: '/images/sounding.jpg', alt: 'Sounding home screen: sunlit water with a search bar that reads "Don\'t know its name? Describe it." and three example descriptions' },
+  },
+  {
+    name: 'macro-chatbot',
+    category: 'AI & Machine Learning',
+    stack: ['Python', 'Flask', 'Claude API', 'Ollama', 'USDA FoodData Central'],
+    bullets: [
+      'Built a chatbot that builds a recipe ingredient-by-ingredient and returns exact macros via a **RAG** pipeline over USDA FoodData Central, with recipe generation on **Claude** and automatic failover to a local **Ollama** model',
+      'Covered ingredients USDA can\'t match with an LLM-estimated macro breakdown, rejected inputs that aren\'t real ingredients, and shared one conversation engine between a **Flask** web UI and a CLI',
+    ],
+    github: 'https://github.com/jacobptnguyen/macro-chatbot',
+    image: { src: '/images/macro-chatbot.png', alt: 'macro-chatbot showing a finished chicken and rice recipe followed by a macro summary of 525 kcal, 66 g protein, 42 g carbs, and 7.7 g fat' },
   },
   {
     name: 'Refly',
