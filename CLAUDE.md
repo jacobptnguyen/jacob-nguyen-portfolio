@@ -38,6 +38,8 @@ different, and a difference between them is not drift to be reconciled.
   outrank the line it displaces. Cut anything that does not earn its height for a SWE
   screen, even when it is true and even when it is on the site.
 
+`resume/resume.tex` is compiled in Overleaf, so it must compile as-is when pasted there. After changing it, re-paste into Overleaf, confirm it still fits one page, and refresh `public/Jacob_Nguyen_resume.pdf` from the compiled result.
+
 So the normal outcome is **keep on site, cut from resume**, not remove from both. Before
 cutting something, ask which surface it fails on. Wording fixes and factual corrections
 still apply to both.
