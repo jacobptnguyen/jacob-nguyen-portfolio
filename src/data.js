@@ -46,6 +46,11 @@ export const experience = [
     employmentType: 'Internship',
     location: 'Greenfield, CA (Remote)',
     date: 'Oct 2026 – Present',
+    bullets: [
+      'Redesigned the account onboarding flow, cutting the verification steps before first use of the core service from **4** to **2** and replacing access checks duplicated across web and mobile API endpoints with one shared server-side helper that still works with older app builds',
+      'Restructured the backend by splitting monolithic route and service files into focused modules with no change in behavior, enforcing account-status checks across web and mobile APIs, and moving legacy URLs to clean routes with method-preserving redirects',
+      'Rebuilt the frontend on a shared design system with reusable components, bilingual English/Spanish support, and accessibility features, and cut site image weight **88%** to speed up page loads',
+    ],
   },
   {
     role: 'Full Stack Engineer Intern',
@@ -53,6 +58,11 @@ export const experience = [
     employmentType: 'Internship',
     location: 'Monterey, CA (Remote)',
     date: 'Oct 2026 – Present',
+    bullets: [
+      'Develop and maintain full-stack features for an open-beta platform connecting filmmakers with freelance creative professionals',
+      "Redesigned the platform's user interface to a new design system, delivering a consistent experience across the entire site",
+      'Strengthened the reliability and security of payment, hiring, and account workflows by identifying issues through independent code audits and resolving them with tested fixes',
+    ],
   },
   {
     role: 'Gen AI + Full Stack Intern',
@@ -61,9 +71,9 @@ export const experience = [
     location: 'San Francisco, CA (Remote)',
     date: 'Aug 2026 – Present',
     bullets: [
-      "Co-led a **4**-person code quality initiative on the production site, triaging a teammate's **25**-finding code review into 4 owned sub-issues grouped by shared files to avoid merge conflicts",
+      "Reviewed and merged **3** teammates' PRs as full stack co-lead, triaging a **25**-finding production code review into per-person sub-issues grouped by shared files to avoid merge conflicts",
       "Nearly tripled the AI agent platform's guardrail tests from **14** to **40** by adding **Pydantic** schema validation that swaps malformed LLM responses for a safe fallback, a **19**-case regression set, and a first LLM-judge baseline for two chatbots",
-      "Shipped **5** merged PRs into Think Round's production **Next.js**/**TypeScript** site, cutting **Sanity** publish-to-live time from a full redeploy to **30 seconds** with ISR revalidation and rebuilding the Paradise Project page to match its Figma design",
+      "Cut **Sanity** publish-to-live time to about **30 seconds** (from a full redeploy) with ISR revalidation, and rebuilt the Paradise Project page on the production **Next.js**/**TypeScript** site to match its Figma design, adding a list/grid view toggle",
     ],
     links: [
       { label: '6 merged PRs on GitHub', href: 'https://github.com/search?q=org%3AThink-Round-Inc+author%3Ajacobptnguyen+is%3Apr+is%3Amerged&type=pullrequests' },

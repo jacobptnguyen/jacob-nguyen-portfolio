@@ -71,39 +71,46 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {Software Engineer Intern}{Oct 2026 -- Present}
+      {Aprentech}{Greenfield, CA (Remote)}
+      \resumeItemListStart
+        \resumeItem{Redesigned the account onboarding flow, cutting the verification steps before first use of the core service from \textbf{4} to \textbf{2} and replacing access checks duplicated across web and mobile API endpoints with one shared server-side helper that still works with older app builds}
+        \resumeItem{Restructured the backend by splitting monolithic route and service files into focused modules with no change in behavior, enforcing account-status checks across web and mobile APIs, and moving legacy URLs to clean routes with method-preserving redirects}
+        \resumeItem{Rebuilt the frontend on a shared design system with reusable components, bilingual English/Spanish support, and accessibility features, and cut site image weight \textbf{88\%} to speed up page loads}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Full Stack Engineer Intern}{Oct 2026 -- Present}
+      {VettyFilms}{Monterey, CA (Remote)}
+      \resumeItemListStart
+        \resumeItem{Develop and maintain full-stack features for an open-beta platform connecting filmmakers with freelance creative professionals}
+        \resumeItem{Redesigned the platform's user interface to a new design system, delivering a consistent experience across the entire site}
+        \resumeItem{Strengthened the reliability and security of payment, hiring, and account workflows by identifying issues through independent code audits and resolving them with tested fixes}
+      \resumeItemListEnd
+    \resumeSubheading
       {Gen AI + Full Stack Intern}{Aug 2026 -- Present}
       {Think Round}{San Francisco, CA (Remote)}
       \resumeItemListStart
-        \resumeItem{Co-led a \textbf{4}-person code quality initiative on the production site, triaging a teammate's \textbf{25}-finding code review into 4 owned sub-issues grouped by shared files to avoid merge conflicts}
+        \resumeItem{Reviewed and merged \textbf{3} teammates' PRs as full stack co-lead, triaging a \textbf{25}-finding production code review into per-person sub-issues grouped by shared files to avoid merge conflicts}
         \resumeItem{Nearly tripled the AI agent platform's guardrail tests from \textbf{14} to \textbf{40} by adding \textbf{Pydantic} schema validation that swaps malformed LLM responses for a safe fallback, a \textbf{19}-case regression set, and a first LLM-judge baseline for two chatbots}
-        \resumeItem{Shipped \textbf{5} merged PRs into Think Round's production \textbf{Next.js}/\textbf{TypeScript} site, cutting \textbf{Sanity} publish-to-live time from a full redeploy to \textbf{30 seconds} with ISR revalidation and rebuilding the Paradise Project page to match its Figma design}
+        \resumeItem{Cut \textbf{Sanity} publish-to-live time to about \textbf{30 seconds} (from a full redeploy) with ISR revalidation, and rebuilt the Paradise Project page on the production \textbf{Next.js}/\textbf{TypeScript} site to match its Figma design, adding a list/grid view toggle}
       \resumeItemListEnd
     \resumeSubheading
       {Open Source Contributor}{Aug 2026 -- Oct 2026}
-      {Various Projects}{Remote}
+      {freeCodeCamp, Open Energy Dashboard}{Remote}
       \resumeItemListStart
         \resumeItem{Fixed \textbf{4} freeCodeCamp workshops and labs (\textbf{JavaScript}/\textbf{TypeScript}) by replacing brittle regex test assertions with behavior- and AST-based checks, so arrow functions and alternate styles pass without weakening test rigor}
         \resumeItem{Eliminated a recurring webpack build warning and a duplicated \textbf{Docker} database setting in Open Energy Dashboard, by excluding a dependency's missing source map from source-map-loader and reusing the shared docker-compose variables}
-        \resumeItem{Contributed to OpenRFM, an open-source customer-segmentation tool, adding an upload-requirements hint that surfaces required CSV columns before file selection to reduce failed uploads}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Machine Learning Researcher}{Oct 2025 -- Dec 2025}
-      {PRISM ML Lab, UC Davis}{Davis, CA (Remote)}
-      \resumeItemListStart
-        \resumeItem{Designed \textbf{4} LLM evaluation tasks that \textbf{Gemini 2.5} failed, each with a \textbf{Python} verification script, computed ground truth, and error analysis, catching invented data rows and correct code paired with wrong reported output}
-        \resumeItem{Wrote \textbf{7} test questions to evaluate a \textbf{RAG} marketing agent on Mistral-7B and Gemini 2.0 Flash, covering competitor analysis, market trends, and target audiences}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Software Engineer Intern}{Jun 2024 -- Jul 2024}
-      {Monterey Peninsula College}{Monterey, CA}
-      \resumeItemListStart
-        \resumeItem{Built a data visualization tool in Component Pascal (BlackBox Framework) parsing arbitrary CSVs into a linked-list structure, dynamically rendering histograms}
-        \resumeItem{Designed a binning algorithm for multi-histogram rendering, mentored by an industry mentor at Applied Solar Energy}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 %----------PROJECTS----------
 \section{Projects}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Salon Calendar} $|$ React, Vite, Tailwind CSS, Supabase, PostgreSQL $|$ \href{https://saloncalendar.vercel.app/}{Live Demo}}{}
+          \resumeItemListStart
+            \resumeItem{Captured \textbf{125+} real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via \textbf{Supabase} Realtime}
+            \resumeItem{Engineered a time parser across \textbf{36} asserted cases, letting staff type appointments as written on paper (``230 Full set'', ``2;30''), storing plain date and time columns so UTC conversion never shifts a booking a day}
+          \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{AutoFit} $|$ Next.js, TypeScript, Flask, Python, scikit-learn, Claude API $|$ \href{https://auto-fit-pi.vercel.app}{Live Demo}}{}
           \resumeItemListStart
@@ -116,28 +123,16 @@
             \resumeItem{Reached \textbf{450+} unique visitors with a QR-code menu that replaced a salon's single shared swatch binder, where one customer browsing left everyone else waiting. Built the gallery as \textbf{30+} independently pinch-zoomable, pannable, and rotatable cards}
             \resumeItem{Resolved a scroll-vs-zoom gesture conflict by gating pan activation on zoom state, and built a swatch-color fallback for missing photos, keeping the static bundle backend-free and accessible (semantic buttons, reduced-motion support)}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Salon Calendar} $|$ React, Vite, Tailwind CSS, Supabase, PostgreSQL $|$ \href{https://saloncalendar.vercel.app/}{Live Demo}}{}
-          \resumeItemListStart
-            \resumeItem{Captured \textbf{125+} real appointments on one shared calendar that replaced a salon's stack of per-employee paper books, which gave no single view of the day and sat one coffee spill away from lost bookings. Syncs across every device instantly via \textbf{Supabase} Realtime}
-            \resumeItem{Engineered a time parser across \textbf{36} asserted cases, letting staff type appointments as written on paper (``230 Full set'', ``2;30''), storing plain date and time columns so UTC conversion never shifts a booking a day}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Rate My Stuff} $|$ MERN, Express, MongoDB, Mongoose, TypeScript $|$ \href{https://rate-my-stuff.onrender.com/}{Live Demo}}{}
-          \resumeItemListStart
-            \resumeItem{Engineered a \textbf{RESTful API} in \textbf{Node.js}/\textbf{Express} with \textbf{full CRUD} for ratings, comments, and images, backed by \textbf{MongoDB}/Mongoose}
-            \resumeItem{Built a responsive \textbf{React}/\textbf{TypeScript} frontend with \textbf{React Router}, deployed to Render with \textbf{GitHub} CI/CD}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
 %----------TECHNICAL SKILLS----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \normalsize{\item{
-     \textbf{Languages}: JavaScript, TypeScript, Python, HTML/CSS \\
-     \textbf{Frameworks \& Libraries}: React, React Router, Next.js, Node.js, Express, Tailwind CSS, Vite, Flask \\
-     \textbf{Databases}: PostgreSQL, Supabase, MongoDB \\
-     \textbf{AI/ML \& APIs}: Claude API, RAG, scikit-learn \\
-     \textbf{Tools \& Platforms}: Git, GitHub, Docker, Vercel, Sanity CMS
+     \textbf{Languages}: JavaScript, TypeScript, Python \\
+     \textbf{Frameworks \& Libraries}: React, Next.js, Tailwind CSS, Vite, Flask \\
+     \textbf{Databases}: PostgreSQL, Supabase \\
+     \textbf{AI/ML \& APIs}: Claude API, scikit-learn \\
+     \textbf{Tools \& Platforms}: Docker, Sanity CMS
     }}
  \end{itemize}
 \end{document}
