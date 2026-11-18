@@ -265,34 +265,9 @@ export const projects = [
     github: 'https://github.com/jacobptnguyen/macro-chatbot',
     image: { src: '/images/macro-chatbot.png', alt: 'macro-chatbot showing a finished chicken and rice recipe followed by a macro summary of 525 kcal, 66 g protein, 42 g carbs, and 7.7 g fat' },
   },
-  {
-    name: 'Refly',
-    category: 'Games',
-    stack: ['JavaScript', 'HTML Canvas', 'CSS', 'GitHub Pages'],
-    bullets: [
-      'Built a flap-through-gaps game in vanilla **JavaScript** driven by one **state machine** that carries a run across death, a side-scrolling mini-game, and resume through a snapshot and restore contract, with every visual drawn on **Canvas 2D** and no dependencies or assets',
-    ],
-    github: 'https://github.com/jacobptnguyen/refly',
-    demo: 'https://jacobptnguyen.github.io/refly/',
-    images: [
-      { src: '/images/refly-flight.png', alt: 'Refly flight mode after a collision, with orange pipes and a "Second chance!" banner' },
-      { src: '/images/refly-hop.png', alt: 'Refly\'s side-scrolling mini-game with a "Back in the air!" banner and a 5/5 counter' },
-    ],
-  },
-  {
-    name: 'Tic Tac Connect',
-    category: 'Games',
-    stack: ['JavaScript', 'HTML', 'CSS', 'GitHub Pages'],
-    bullets: [
-      'Built a nested-board game engine in vanilla **JavaScript**: 5x5 Connect Four grids inside a 3x3 tic-tac-toe board, with win detection at both levels, the rules isolated in their own module, zero dependencies, and no build step',
-    ],
-    github: 'https://github.com/jacobptnguyen/ticTacConnect',
-    demo: 'https://jacobptnguyen.github.io/ticTacConnect/',
-    image: { src: '/images/tic-tac-connect.png', alt: 'Tic Tac Connect mid-game: a 3x3 board of Connect Four grids, with several already claimed by a large X or O' },
-  },
 ]
 
-export const projectCategories = ['AI & Machine Learning', 'Web Apps', 'Games']
+export const projectCategories = ['AI & Machine Learning', 'Web Apps']
 
 export const skills = [
   {
